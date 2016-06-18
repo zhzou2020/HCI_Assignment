@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+
+	<package name="struts2" namespace="/user" extends="struts-default">
+		<action name="register" class="edu.nju.desserthouse.action.RegisterAction">
+			<result name="success">/user/RegUser.jsp</result>
+			<result name="input">/user/register.jsp</result>
+		</action>
+
+		<action name="login" class="edu.nju.desserthouse.action.LoginAction">
+			<result name="success">/user/RegUser.jsp</result>
+			<result name="input">/user/Login.jsp</result>
+		</action>
+		
+		<action name="logout" class="edu.nju.desserthouse.action.LoginAction" method="logout">
+			<result name="success">/user/Login.jsp</result>
+		</action>
+		
+		<action name="payRecord" class="edu.nju.desserthouse.action.UserAction" method="payRecord">
+			<result name="success">/user/payRecord.jsp</result>
+			<result name="input">/user/Login.jsp</result>
+		</action>
+		
+		<action name="userList"  class="edu.nju.desserthouse.action.UserAction" method="userList">
+			<result name="success">/user/userList.jsp</result>
+			<result name="input">/employee/Login.jsp</result>
+		</action>
+		
+		<action name="userInfo" class="edu.nju.desserthouse.action.UserAction" method="userInfo">
+			<result name="success">/user/memberInfo.jsp</result>
+			<result name="input">/employee/Login.jsp</result>
+		</action>
+		
+		<action name="Profile" class="edu.nju.desserthouse.action.UserAction" method="profile">
+			<result name="success">/user/memberInfo.jsp</result>
+			<result name="input">/user/Login.jsp</result>
+		</action>
+		
+		<action name="saleRecord" class="edu.nju.desserthouse.action.SaleAction" method="saleRecord">
+			<result name="success">/sale/saleList.jsp</result>
+			<result name="input">/employee/Login.jsp</result>
+		</action>
+	</package>
+	
+	<package name="goods" namespace="/goods" extends="struts-default">
+		<action name="goodslist" class="edu.nju.desserthouse.action.GoodsAction" method="goodsList">
+			<result name="success">/goods/goodsList.jsp</result>
+		</action>
+		<action name="goodsInfo" class="edu.nju.desserthouse.action.GoodsAction" method="goodsInfo">
+			<result name="success">/goods/goodsInfo.jsp</result>
+		</action>
+	</package>
+	
+	<package name="branch" namespace="/branch" extends="struts-default">
+		<action name="branchList" class="edu.nju.desserthouse.action.BranchAction" method="branchList">
+			<result name="success">/branch/branchList.jsp</result>
+		</action>
+	</package>
+	
+	<package name="sale" namespace="/sale" extends="struts-default">
+		<action name="saleCash" class="edu.nju.desserthouse.action.SaleAction" method="saleStart">
+			<result name="success">/sale/saleCash.jsp</result>
+			<result name="input">/employee/Login.jsp</result>
+		</action>
+		<action name="saleCard" class="edu.nju.desserthouse.action.SaleAction" method="saleStart">
+			<result name="success">/sale/saleCard.jsp</result>
+			<result name="input">/employee/Login.jsp</result>
+		</action>
+		<action name="saleList" class="edu.nju.desserthouse.action.SaleAction" method="saleList">
+			<result name="success">/sale/saleList.jsp</result>
+			<result name="input">/user/Login.jsp</result>
+		</action>
+		<action name="branchDateChoose" class="edu.nju.desserthouse.action.SaleAction" method="branchDateChoose">
+			<result name="success">/sale/BranchDateChoose.jsp</result>
+		</action>
+		<action name="preorderStart" class="edu.nju.desserthouse.action.SaleAction" method="preorderStart">
+			<result name="success">/sale/Preorder.jsp</result>
+		</action>
+	</package>
+	
+	<package name="employee" namespace="/employee" extends="struts-default">
+		<action name="login" class="edu.nju.desserthouse.action.EmployeeAction" method="Login">
+			<result name="success">/employee/FrontPage.jsp</result>
+			<result name="input">/employee/Login.jsp</result>
+		</action>
+		<action name="logout" class="edu.nju.desserthouse.action.EmployeeAction" method="Logout">
+			<result name="success">/employee/Login.jsp</result>
+		</action>
+		<action name="employeeList" class="edu.nju.desserthouse.action.EmployeeAction" method="employeeList">
+			<result name="success">/employee/employeeList.jsp</result>
+		</action>
+		<action name="employeeInfo" class="edu.nju.desserthouse.action.EmployeeAction" method="employeeInfo">
+			<result name="success">/employee/employeeInfo.jsp</result>
+		</action>
+	</package>
+	
+	<package name="plan" namespace="/plan" extends="struts-default">
+		<action name="makePlan" class="edu.nju.desserthouse.action.PlanAction" method="makePlan">
+			<result name="success">/plan/makePlan.jsp</result>
+			<result name="fail">/employee/Login.jsp</result>
+		</action>
+		<action name="planList" class="edu.nju.desserthouse.action.PlanAction" method="planList">
+			<result name="success">/plan/planList.jsp</result>
+			<result name="fail">/employee/Login.jsp</result>
+		</action>
+		<action name="modifyPlan" class="edu.nju.desserthouse.action.PlanAction" method="modifyPlan">
+			<result name="success">/plan/modifyPlan.jsp</result>
+		</action>
+	</package>	
+	
+	<package name="ajax_json" extends="json-default">
+		<action name="addgoods" class="edu.nju.desserthouse.action.GoodsAction" method="addGoods">
+			<result name="result" type="json"/>
+		</action>
+		<action name="updategoods" class="edu.nju.desserthouse.action.GoodsAction" method="updateGoods">
+			<result name="result" type="json"/>
+		</action>
+		<action name="getGoodsInfo" class="edu.nju.desserthouse.action.GoodsAction" method="GoodsInfo">
+			<result name="result" type="json"/>
+		</action>
+		<action name="goodsInformation" class="edu.nju.desserthouse.action.GoodsAction" method="goodsInformation">
+			<result name="result" type="json"/>
+		</action>
+		<action name="addemployee" class="edu.nju.desserthouse.action.EmployeeAction" method="addEmployee">
+			<result name="result" type="json"/>
+		</action>
+		<action name="updateEmployee" class="edu.nju.desserthouse.action.EmployeeAction" method="updateEmployee">
+			<result name="result" type="json"/>
+		</action>
+		<action name="deleteEmployee" class="edu.nju.desserthouse.action.EmployeeAction" method="deleteEmployee">
+			<result name="result" type="json"/>
+		</action> 
+		<action name="changeProfile" class="edu.nju.desserthouse.action.UserAction" method="changeProfile">
+			<result name="result" type="json"/>
+		</action>
+		<action name="stopUser" class="edu.nju.desserthouse.action.UserAction" method="stopUser">
+			<result name="stopresult" type="json"/>
+		</action>
+		<action name="memberInfo" class="edu.nju.desserthouse.action.UserAction" method="memberInfo">
+			<result name="result" type="json"/>
+		</action>
+		<action name="pointChange" class="edu.nju.desserthouse.action.UserAction" method="pointChange">
+			<result name="result" type="json"/>
+		</action>
+		<action name="branchInformation" class="edu.nju.desserthouse.action.BranchAction" method="branchInformation">
+			<result name="result" type="json"/>
+		</action>
+		<action name="updateBranch" class="edu.nju.desserthouse.action.BranchAction" method="updateBranch">
+			<result name="result" type="json"/>
+		</action>
+		<action name="deleteBranch" class="edu.nju.desserthouse.action.BranchAction" method="deleteBranch">
+			<result name="result" type="json"/>
+		</action>
+		<action name="addBranch" class="edu.nju.desserthouse.action.BranchAction" method="addBranch">
+			<result name="result" type="json"/>
+		</action>
+		<action name="getBranchAllInfo" class="edu.nju.desserthouse.action.BranchAction" method="BranchAllInfo">
+			<result name="result" type="json"/>
+		</action>
+		<action name="getName" class="edu.nju.desserthouse.action.ToolAction" method="getBranchName">
+			<result name="result" type="json"/>
+		</action>
+		<action name="addItem" class="edu.nju.desserthouse.action.PlanAction" method="addItem">
+			<result name="result" type="json"/>
+		</action>
+		<action name="deleteItem" class="edu.nju.desserthouse.action.PlanAction" method="deleteItem">
+			<result name="result" type="json"/>
+		</action>
+		<action name="createPlan" class="edu.nju.desserthouse.action.PlanAction" method="createPlan">
+			<result name="result" type="json"/>
+		</action>
+		<action name="planInfo" class="edu.nju.desserthouse.action.PlanAction" method="planInfo">
+			<result name="result" type="json"/>
+		</action>
+		<action name="passPlan" class="edu.nju.desserthouse.action.PlanAction" method="passPlan">
+			<result name="result" type="json"/>
+		</action>
+		<action name="rejectPlan" class="edu.nju.desserthouse.action.PlanAction" method="rejectPlan">
+			<result name="result" type="json"/>
+		</action>
+		<action name="updatePlan" class="edu.nju.desserthouse.action.PlanAction" method="updatePlan">
+			<result name="result" type="json"/>
+		</action>
+		<action name="topup" class="edu.nju.desserthouse.action.TopupAction">
+			<result name="result" type="json"/>
+		</action>
+		<action name="addSaleItem" class="edu.nju.desserthouse.action.SaleAction" method="addSaleItem">
+			<result name="result" type="json"/>
+		</action>
+		<action name="addSaleItem_pre" class="edu.nju.desserthouse.action.SaleAction" method="addSaleItem_pre">
+			<result name="result" type="json"/>
+		</action>
+		<action name="deleteSaleItem" class="edu.nju.desserthouse.action.SaleAction" method="deleteSaleItem">
+			<result name="result" type="json"/>
+		</action>
+		<action name="cashSale" class="edu.nju.desserthouse.action.SaleAction" method="cashSale">
+			<result name="result" type="json"/>
+		</action>
+		<action name="cardSale" class="edu.nju.desserthouse.action.SaleAction" method="cardSale">
+			<result name="result" type="json"/>
+		</action>
+		<action name="preorderSale" class="edu.nju.desserthouse.action.SaleAction" method="preorderSale">
+			<result name="result" type="json"/>
+		</action>
+		<action name="saleInfo" class="edu.nju.desserthouse.action.SaleAction" method="saleInfo">
+			<result name="result" type="json"/>
+		</action>
+		<action name="cancelSale" class="edu.nju.desserthouse.action.SaleAction" method="cancelSale">
+			<result name="result" type="json"/>
+		</action>
+		<action name="getGoodsStockInfo" class="edu.nju.desserthouse.action.Tool2Action" method="GoodsStockInfo">
+			<result name="result" type="json"/>
+		</action>
+		<action name="getLivePlace" class="edu.nju.desserthouse.action.AnalyseAction" method="LivePlace">
+			<result name="result" type="json"/>
+		</action>
+		<action name="getGender" class="edu.nju.desserthouse.action.UserAction" method="Gender">
+			<result name="result" type="json"/>
+		</action>
+		<action name="getCardState" class="edu.nju.desserthouse.action.UserAction" method="CardState">
+			<result name="result" type="json"/>
+		</action>
+		<action name="getSaleOrder" class="edu.nju.desserthouse.action.SaleAction" method="SaleOrder">
+			<result name="result" type="json"/>
+		</action>
+		<action name="getAge" class="edu.nju.desserthouse.action.UserAction" method="Age">
+			<result name="result" type="json"/>
+		</action>
+	</package>
+
+</struts>
+
