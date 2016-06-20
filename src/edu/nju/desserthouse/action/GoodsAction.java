@@ -4,6 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import edu.nju.desserthouse.model.Employee;
 import edu.nju.desserthouse.model.Goods;
 import edu.nju.desserthouse.model.User;
 import edu.nju.desserthouse.service.GoodsService;
@@ -91,12 +92,12 @@ public class GoodsAction extends BaseAction{
 		String name = goods.getName();
 		String price = Double.toString(goods.getPrice());
 		String description = goods.getInfo();
-		User user = (User) session.get("user");
+		Employee employee = (Employee) session.get("employee");
 		String ifuser = "";
-		if(user == null){
-			ifuser = "0";
-		} else{
+		if(employee == null){
 			ifuser = "1";
+		} else{
+			ifuser = "0";
 		}
 		result = "{\"name\":\"" + name + "\", \"price\":\"" + price + "\", \"info\":\"" + description + "\", \"ifuser\":\"" + ifuser + "\"}";
 		return "result";

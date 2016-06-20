@@ -52,22 +52,32 @@
 				<h4 class="modal-title" id="info_name">测试</h4>
 				<span></span>
 			</div>
-			<div class="modal-body f-14">
-				<form>
-					<p id="info_id">商品id:</p>
+			<div class="modal-body f-14 single_goods_info">
+				<img src="#" id="info_img"/>
+				<form class="p_container form-inline">
+					<p class="col-xs-5 info_label">甜品id:</p>
+					<p id="info_id" class="col-xs-offset-1 col-xs-6 info_tag"></p>
+					<br />
 					<%
 						if (session.getAttribute("employee") != null) {
 					%>
-					商品单价:<input type="text" id="info_price" value="test"
-						class="form-control login-field" />
-					商品信息:<textarea id="info_info" name="info"
+					<label class="col-xs-5 info_label" for="info_price">甜品单价:</label>
+					<input type="text" id="info_price" value="test"
+						class="form-control login-field col-xs-offset-1 col-xs-6" style="width:140px;"/>
+					
+					<br/>
+					<br/>
+					<label class="col-xs-5 info_label" for="info_info">甜品信息:</label>
+					<textarea id="info_info" name="info"
 						placeholder=""
-						class="form-control" rows="7">aaa</textarea>
+						class="form-control col-xs-offset-1 col-xs-6" rows="7" style="width:140px;">aaa</textarea>
 					<%
 						} else {
 					%>
-					<p id="info_price_user">商品单价: test2</p>
-					<p id="info_info_user">商品信息: aaaa</p>
+					<p class="col-xs-5 info_label">甜品单价:</p> 
+					<p id="info_price_user" class="col-xs-offset-1 col-xs-6 info_tag"></p>
+					<p class="col-xs-5 info_label">甜品信息:</p>
+					<p id="info_info_user" class="col-xs-offset-1 col-xs-6 info_tag"></p>
 					<%
 						}
 					%>

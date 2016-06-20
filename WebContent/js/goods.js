@@ -49,10 +49,11 @@ $('body').delegate('.g_info', 'click', function() {
 		success : function(data) {
 			var dataRole = $.parseJSON(data["result"]);
 			$('#info_name').html(dataRole['name']);
-			$('#info_id').html("商品id:  " + gid);
+			$('#info_img').attr("src", dataRole['src']);
+			$('#info_id').html(gid);
 			if(dataRole['ifuser'] == "1"){
-				$('#info_price_user').html("商品单价:  " + dataRole['price']);
-				$('#info_info_user').html("商品信息:  " + dataRole['info']);
+				$('#info_price_user').html(dataRole['price']);
+				$('#info_info_user').html(dataRole['info']);
 			} else{
 				$('#info_price').val(dataRole['price']);
 				$('#info_info').val(dataRole['info']);

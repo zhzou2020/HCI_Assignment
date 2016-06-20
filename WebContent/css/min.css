@@ -62,6 +62,31 @@
 	margin:7px 10px 0 100px;
 }
 
+.single_goods_info{
+	overflow:auto;
+}
+
+.single_goods_info > img{
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+
+.single_goods_info > .p_container{
+	float: left;
+	width:300px;
+	margin-left:40px;
+}
+
+.info_tag{
+	font-size:16px;
+}
+
+.info_label{
+	text-align:right;
+	font-size:16px;
+}
+
 .navbar {
 	background-color: #ecedef;
 }
@@ -251,6 +276,6 @@
 
 .main_container {
 	position: relative;
-	margin: 70px 20px 0% 210px;
+	margin: 70px 20px 0% 170px;
 	padding: 10px 10px 10px 30px;
 }
