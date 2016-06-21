@@ -303,3 +303,9 @@ p{
 	margin-left: 30px !important;
 	width: 700px !important;
 }
+
+.table_position2 {
+	position: relative;
+	margin-top: 30px !important;
+	margin-left: 20px !important;
+}
