@@ -66,12 +66,12 @@
 		</div>
 		<br /> <br />
 		<div class="col-xs-offset-1 col-xs-3">销售数量:</div>
-		<div class="col-xs-8">
+		<div class="col-xs-6">
 			<input type="text" value="1" id="sale_number" class="form-control" />
 		</div>
 	
 		<br /> <br />
-		<div class="col-xs-offset-1 col-xs-3">
+		<div class="col-xs-offset-7 col-xs-3">
 			<s:if test="#session.user.state == 1">
 				<input type="button" value="添加商品" id="addSaleItem_pre"
 					class="btn btn-primary btn-block" />
@@ -87,7 +87,7 @@
 		
 		<br/>
 		<br/>
-		<div class="col-xs-9 col-xs-3">
+		<div class="col-xs-offset-7 col-xs-3">
 			<input type="button" value="结账" id="pre_settle" data-toggle="modal" data-target="#myModal"
 				class="btn btn-primary btn-block" />
 		</div>
