@@ -150,19 +150,4 @@
 		<li><a
 			href="<%=request.getContextPath() + "/branch/branchList"%>">门店信息</a></li>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<%
-			if (session.getAttribute("user") == null
-					&& session.getAttribute("employee") == null) {
-		%>
-		<li><a href="<%=request.getContextPath() + "/user/Login.jsp"%>">用户登录</a></li>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<li><a
-			href="<%=request.getContextPath() + "/employee/Login.jsp"%>">员工登录</a></li>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<li><a
-			href="<%=request.getContextPath() + "/user/register.jsp"%>">会员注册</a></li>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<%
-			}
-		%>
 	</ul>
