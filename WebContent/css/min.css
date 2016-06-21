@@ -170,17 +170,18 @@ p{
 }
 
 .sale_table {
-	position: absolute;
-	left: 260px;
-	top: 200px;
+	float:left;
+	margin-left: 30px;
+	margin-top: 70px;
 	width: 400px;
+	height:500px;
 }
 
 .sale_add {
-	position: absolute;
-	left: 640px;
-	top: 200px;
-	width: 700px;
+	float:left;
+	margin-left: 20px;
+	margin-top: 70px;
+	width: 500px;
 }
 
 .preorder_add {
