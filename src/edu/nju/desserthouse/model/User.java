@@ -1,6 +1,8 @@
 package edu.nju.desserthouse.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.text.DateFormat;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -130,5 +132,14 @@ public class User implements Serializable
 	}
 	public void setRank(int rank) {
 		this.rank = rank;
+	}
+	public String getBirthdayRegular(){
+		String s = DateFormat.getDateInstance(DateFormat.MEDIUM).format(this.birthday);
+		return s;
+	}
+	public String getBalanceRegular(){
+		BigDecimal b = new BigDecimal(this.balance);  
+		double f1 = b.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+		return Double.toString(f1);
 	}
 }
