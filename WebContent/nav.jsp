@@ -84,6 +84,22 @@
 			</ul>
 		</div>
 		<%
+			} else {
+		%>
+		<div class="btn-group">
+			<button class="btn btn-primary col-xs-12" type="button"
+				data-toggle="dropdown">
+				&nbsp;&nbsp;登录&nbsp;&nbsp;
+			</button>
+		</div>
+		<div class="btn-group">
+			<button class="btn btn-default col-xs-12" type="button"
+				data-toggle="dropdown">
+				&nbsp;&nbsp;注册&nbsp;&nbsp;
+			</button>
+		</div>
+		
+		<%
 			}
 		%>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
