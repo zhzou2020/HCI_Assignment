@@ -12,16 +12,14 @@
 	<form method="post" action="<%=request.getContextPath()+"/employee/login"%>" class="login_info">
 		<div class="form-group container has-feedback">
 			<input name="id" type="text" class="form-control login-field"
-				id="id" style="width:200px" placeholder="工号"/>
-			<label class="login-field-icon fui-man-16" for="login-name">
-			</label>
+				id="id" style="width:270px" placeholder="工号"/>
 		</div>
 		<div class="form-group container has-feedback">
 			<input name="password" type="password" class="form-control login-field"
-				id="password" style="width:200px" placeholder="密码"/>
+				id="password" style="width:270px" placeholder="密码"/>
 		</div>
 		<input type="submit" class="btn btn-primary btn-lg" name="submit"
-			value="登录" style="width: 200px; margin-left: 15px"/>
+			value="登录" style="width: 270px; margin-left: 15px"/>
 	</form>
 </body>
 </html>
