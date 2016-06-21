@@ -285,6 +285,12 @@ p{
 	padding: 10px 10px 10px 30px;
 }
 
+.login_container {
+	position: relative;
+	margin: 37px 20px 0% 800px;
+	padding: 10px 10px 10px 30px;
+}
+
 .position{
 	margin-left:20px;
 	font-size: 15px;
