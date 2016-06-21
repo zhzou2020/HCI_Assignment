@@ -32,8 +32,8 @@
 				<td><s:property value="#plan['id']" /></td>
 				<td><s:property value="#plan['bid']" /></td>
 				<td><s:property value="#plan['eid']" /></td>
-				<td><s:property value="#plan['start_regular']" /></td>
-				<td><s:property value="#plan['end_regular']" /></td>
+				<td><s:property value="#plan['start_date']" /></td>
+				<td><s:property value="#plan['end_date']" /></td>
 				<td><s:if test="#plan['state'] == 0">未审批</s:if><s:if test="#plan['state'] == 1">审批通过</s:if><s:if test="#plan['state'] == -1">审批不通过</s:if><s:if test="#plan['state'] == -2">已取消</s:if>
 				<%
 					if (session.getAttribute("employee") != null) {
