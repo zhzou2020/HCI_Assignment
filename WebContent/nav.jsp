@@ -88,13 +88,13 @@
 		%>
 		<div class="btn-group">
 			<button class="btn btn-primary col-xs-12" type="button"
-				data-toggle="dropdown">
+				data-toggle="dropdown" onclick="javascript:window.location.href='<%=request.getContextPath() + "/user/Login.jsp"%>';">
 				&nbsp;&nbsp;登录&nbsp;&nbsp;
 			</button>
 		</div>
 		<div class="btn-group">
 			<button class="btn btn-default col-xs-12" type="button"
-				data-toggle="dropdown">
+				data-toggle="dropdown" onclick="javascript:window.location.href='<%=request.getContextPath() + "/user/register.jsp"%>';">
 				&nbsp;&nbsp;注册&nbsp;&nbsp;
 			</button>
 		</div>
