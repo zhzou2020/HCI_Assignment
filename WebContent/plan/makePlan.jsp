@@ -2,62 +2,58 @@
 	pageEncoding="UTF-8"%>
 <title>制定计划</title>
 <%@include file="../nav.jsp"%>
-<form action="" method="post" class="form_info">
-	<div class="form-group container has-feedback">
-		<!-- <div class="col-md-3"></div> -->
-		<div class="col-md-2">商品id:</div>
-		<div class="col-md-3">
-			<select data-toggle="select" name="gid" id="gid"
-				class="form-control select select-default mrs mbm">
-				<s:iterator id="goods" value="#session['goodslist']">
-					<option value="<s:property value="#goods['id']"/>"><s:property
-							value="#goods['id']" /></option>
-				</s:iterator>
-			</select>
-		</div>
-		<br />
-		<br />
-		<!-- <div class="col-md-3"></div> -->
-		<div class="col-md-2">商品名称:</div>
-		<div class="col-md-3">
-			<input type="text" name="gname" id="gname" class="form-control"
-				disabled="disabled" />
-		</div>
-		<br /> <br />
-		<!-- <div class="col-md-3"></div> -->
-		<div class="col-md-2">商品价格:</div>
-		<div class="col-md-3">
-			<input type="text" name="price" id="price" class="form-control" />
-		</div>
-		<br /> <br />
-		<!-- <div class="col-md-3"></div> -->
-		<div class="col-md-2">商品数量:</div>
-		<div class="col-md-3">
-			<input type="text" id="number" name="number" value="10"
-				class="form-control">
-		</div>
-		<br /> <br /><br/>
-		<div class="col-md-3"></div>
-		<div class="col-md-2">
-			<input type="button" value="添加商品" id="addItem"
-				class="btn btn-primary btn-block" />
-		</div>
-		<div class="col-md-3"></div>
-		<br /> <br />
-		<div class="col-md-3"></div>
-		<div class="col-md-2">
-			<s:reset value="重新输入" class="btn btn-primary btn-block" />
-		</div>
-		<div class="col-md-3"></div>
-		<br /> <br />
+<br/>
+<br/>
+<div class="main_container">
+	<p class="position">首页 > 计划制定</p>
+	<div class="form_info">
+		<form action="" method="post" >
+			<div class="form-group has-feedback">
+				<div class="col-md-3">商品id:</div>
+				<div class="col-md-5">
+					<select data-toggle="select" name="gid" id="gid"
+						class="form-control select select-primary mrs mbm">
+						<s:iterator id="goods" value="#session['goodslist']">
+							<option value="<s:property value="#goods['id']"/>"><s:property
+									value="#goods['id']" /></option>
+						</s:iterator>
+					</select>
+				</div>
+				<br />
+				<br />
+				<div class="col-md-3">商品名称:</div>
+				<p class="col-md-8" id="gname"></p>
+				<br /> <br />
+				<div class="col-md-3">商品价格:</div>
+				<div class="col-md-6">
+					<input type="text" name="price" id="price" class="form-control" />
+				</div>
+				<br /> <br />
+				<div class="col-md-3">商品数量:</div>
+				<div class="col-md-6">
+					<input type="text" id="number" name="number" value="10"
+						class="form-control">
+				</div>
+				<br /> <br /><br/>
+				<div class="col-md-offset-1 col-md-4">
+					<s:reset value="重新输入" class="btn btn-default btn-block" />
+				</div>
+				<div class="col-md-4">
+					<input type="button" value="添加商品" id="addItem"
+						class="btn btn-primary btn-block" />
+				</div>
+				<div class="col-md-3"></div>
+				<br /> <br />
+				
+				
+			</div>
+		</form>
 		
-		
+		<div class="col-md-5"></div>
+		<div class="col-md-4">
+			<button class="btn btn-primary btn-block" id="showPlan" name="showPlan" data-toggle="modal" data-target="#myModal" >查看本次计划</button>
+		</div>
 	</div>
-</form>
-
-<div class="col-md-5"></div>
-<div class="col-md-2">
-	<button class="btn btn-primary btn-block" id="showPlan" name="showPlan" data-toggle="modal" data-target="#myModal" style="margin-left:92px;width:160px">查看本次计划</button>
 </div>
 		
 
@@ -75,11 +71,11 @@
 			</div>
 			<div class="modal-body">
 				<form>
-					<div class="col-md-4">
+					<p class="col-md-4">
         				店铺id:
-        			</div>
+        			</p>
 					<div class="col-md-3">
-						<select data-toggle="select" name="b-id" id="b-id" class="form-control select select-default mrs mbm">
+						<select data-toggle="select" name="b-id" id="b-id" class="form-control select select-primary mrs mbm">
 							<s:iterator id="branch" value="#session['branchlist']">
 								<option value="<s:property value="#branch['id']"/>"><s:property
 									value="#branch['id']" /></option>
@@ -88,40 +84,35 @@
         			</div>
         			<br/>
         			<br/>
-        			<div class="col-md-4">
+        			<p class="col-md-4">
         				店名:
-        			</div>
-        			<div class="col-md-6">
-						<input type="text" id="b_name" name="b_name" value="" class="form-control login-field" disabled="disabled"/>
-					</div>
+        			</p>
+        			<p class="col-md-6" id="b_name"></p>
 					<br/>
         			<br/>
-        			<div class="col-md-4">
+        			<p class="col-md-4">
         				计划开始时间:
-        			</div>
-        			<div class="col-md-6">
-						<input type="text" id="start_date" name="end_date" value="<s:property value="#session['plan_start_date']"/>" class="form-control login-field" disabled="disabled"/>
-					</div>
+        			</p>
+        			<p class="col-md-6" id="start_date"><s:property value="#session['plan_start_date']"/></p>
 					<br/>
 					<br/>
-					<div class="col-md-4">
+					<p class="col-md-4">
         				计划结束时间:
-        			</div>
-        			<div class="col-md-6">
-						<input type="text" id="start_date" name="end_date" value="<s:property value="#session['plan_end_date']"/>" class="form-control login-field" disabled="disabled"/>
-					</div>
+        			</p>
+        			<p class="col-md-6" id="end_date"><s:property value="#session['plan_end_date']"/></p>
 				</form>
+				<br/>
 				<br/>
 				<table class="table table-responsive table-hover" id="planitems">
 					<tr>
-						<th>商品id</th>
-						<th>商品单价</th>
-						<th>商品数量</th>
+						<th width="250px">商品id</th>
+						<th width="250px">商品单价</th>
+						<th width="250px">商品数量</th>
 						<%
 							if(session.getAttribute("employee") != null){
 						%>
 						<s:if test="#session.employee.authority == 2">
-							<th>删除商品</th>
+							<th width="80px">删除商品</th>
 						</s:if>
 						<%	} %>
 					</tr>
@@ -151,6 +142,7 @@
 					<button type="button" class="btn btn-primary" name="createPlan"
 						id="createPlan">提交计划</button>
 				</s:if>
+				&nbsp;
 				<%
 					}
 				%>

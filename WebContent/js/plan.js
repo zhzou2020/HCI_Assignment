@@ -6,7 +6,7 @@ $('#gid').change(function(){
 		dataType: 'JSON',
 		success:function(data){
 			var dataRole = $.parseJSON(data["result"]);
-			$("#gname").val(dataRole['name']);
+			$("#gname").html(dataRole['name']);
 			$("#price").val(dataRole['price']);
 		},
 		error:function(){
@@ -23,7 +23,7 @@ $('#b-id').change(function(){
 		dataType: 'JSON',
 		success:function(data){
 			var dataRole = $.parseJSON(data["result"]);
-			$("#b_name").val(dataRole['name']);
+			$("#b_name").html(dataRole['name']);
 		},
 		error:function(){
 			alert("failed");
