@@ -13,18 +13,15 @@
 	</div>
 	<form method="post" action="<%=request.getContextPath()+"/user/login"%>" class="login_info">
 		<div class="form-group container has-feedback">
-			<p>电话号码：</p>
 			<input name="phoneNo" type="text" class="form-control login-field"
-				id="phoneNo" style="width:200px"/>
+				id="phoneNo" style="width:270px" placeholder="账号"/>
 		</div>
 		<div class="form-group container has-feedback">
-			<p>密码：</p>
 			<input name="password" type="password" class="form-control login-field"
-				id="password" style="width:200px"/>
+				id="password" style="width:270px" placeholder="密码"/>
 		</div>
-		<br/>
 		<input type="submit" class="btn btn-primary" name="submit"
-			value="登录" style="width: 200px; margin-left: 15px"/>
+			value="登录" style="width: 270px; margin-left: 15px"/>
 	</form>
 </body>
 </html>

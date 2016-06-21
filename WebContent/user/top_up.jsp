@@ -4,9 +4,13 @@
 </head>
 <body>
 	<%@include file="../nav.jsp" %>
-	<br />
+	<br/>
+	<br/>
+	<div class="main_container">
+		<p class="position">首页 > 账户充值</p>
+	</div>
 	
-	<form method="post" action="user/topup" class="form_info">
+	<form method="post" action="user/topup" class="form_info2">
 		<div class="col-md-3"></div>
 		<div class="col-md-3">银行卡账号:</div>
 		<div class="col-md-3">
@@ -34,7 +38,7 @@
 		<div class="col-md-8"></div>
 		<div class="col-md-3">
 			<input type="button" class="btn btn-primary" name="topup" id="topup"
-				value="充值"/>
+				value="&nbsp;&nbsp;&nbsp;&nbsp;充值&nbsp;&nbsp;&nbsp;&nbsp;"/>
 		</div>
 	</form>
 </body>

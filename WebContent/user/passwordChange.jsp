@@ -2,7 +2,14 @@
     pageEncoding="UTF-8"%>
 <title>修改密码</title>
 <%@include file="../nav.jsp" %>
-<form method="post" action="user/pointChange" class="form_info">
+
+<br/>
+<br/>
+<div class="main_container">
+	<p class="position">首页 > 密码修改</p>
+</div>
+
+<form method="post" action="user/pointChange" class="form_info2">
 		<div class="col-md-3"></div>
 		<div class="col-md-3">原密码:</div>
 		<div class="col-md-3">

@@ -4,7 +4,14 @@
 <title>积分兑换</title>
 
 <%@include file="../nav.jsp" %>
-<form method="post" action="user/pointChange" class="form_info">
+
+<br/>
+<br/>
+<div class="main_container">
+	<p class="position">首页 > 积分兑换</p>
+</div>
+
+<form method="post" action="user/pointChange" class="form_info2">
 		<div class="col-md-3"></div>
 		<div class="col-md-3">兑换积分数:</div>
 		<div class="col-md-3">
@@ -14,7 +21,6 @@
 		</div>
 		<br/>
 		<br/>
-		<br/>
 		<div class="col-md-3"></div>
 		<div class="col-md-3">可兑换现金:</div>
 		<div class="col-md-3">
@@ -22,14 +28,16 @@
 		</div>
 		<br/>
 		<br/>
-		<div class="col-md-5"></div>
-		<p id="showPoint">您现有积分数为<s:property value="#session.user.point"/></p>
-		<div class="col-md-4"></div>
-		<p>每10积分可以兑换1元卡余额</p>
-		<div class="col-md-8"></div>
+		<div class="col-md-3"></div>
+		<div class="col-md-3">现有积分数：</div>
 		<div class="col-md-3">
+		<p id="showPoint"><s:property value="#session.user.point"/></p>
+		</div>
+		<br/>
+		<div class="col-md-8"></div>
+		<div class="col-md-4">
 			<input type="button" class="btn btn-primary" name="pointChange" id="pointChange"
-				value="兑换"/>
+				value="&nbsp;&nbsp;&nbsp;兑换&nbsp;&nbsp;&nbsp;"/>
 		</div>
 	</form>
 </body>
