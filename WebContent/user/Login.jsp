@@ -5,8 +5,12 @@
 <title>登录</title>
 	<%@include file="../nav.jsp"  %>
 	<br/>
-	<br/>
-	<br/>
+	<div class="login_container">
+		<ul class="nav nav-tabs">
+		  <li role="presentation" class="active"><a href="#">用户登录</a></li>
+		  <li role="presentation"><a href="<%=request.getContextPath()+"/employee/Login.jsp"%>">员工登录</a></li>
+		</ul>
+	</div>
 	<form method="post" action="<%=request.getContextPath()+"/user/login"%>" class="login_info">
 		<div class="form-group container has-feedback">
 			<p>电话号码：</p>

@@ -3,7 +3,12 @@
 <title>职工登录</title>
 <%@include file="../nav.jsp" %>
 <br/>
-<br/>
+	<div class="login_container">
+		<ul class="nav nav-tabs">
+		  <li role="presentation"><a href="<%=request.getContextPath()+"/user/Login.jsp"%>">用户登录</a></li>
+		  <li role="presentation" class="active"><a href="#">员工登录</a></li>
+		</ul>
+	</div>
 	<form method="post" action="<%=request.getContextPath()+"/employee/login"%>" class="login_info">
 		<div class="form-group container has-feedback">
 			<input name="id" type="text" class="form-control login-field"
