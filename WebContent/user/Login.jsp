@@ -20,7 +20,7 @@
 		</div>
 		<br/>
 		<input type="submit" class="btn btn-primary" name="submit"
-			value="登录" style="width: 120px; margin-left: 90px"/>
+			value="登录" style="width: 200px; margin-left: 15px"/>
 	</form>
 </body>
 </html>
