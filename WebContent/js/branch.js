@@ -11,9 +11,11 @@ $('body').delegate('.b_info', 'click', function() {
 			var dataRole = $.parseJSON(data["result"]);
 			$('#nameTitle').html(dataRole['name']);
 			$('#id').html(dataRole['id']);
-			$('#bid').val(dataRole['id']);
+			$('#bid').html(dataRole['id']);
 			$('#name').val(dataRole['name']);
+			$('#name').html(dataRole['name']);
 			$('#address').val(dataRole['address']);
+			$('#address').html(dataRole['address']);
 			$('#info').html(dataRole['info']);
 		},
 		error : function() {
@@ -22,7 +24,7 @@ $('body').delegate('.b_info', 'click', function() {
 	})
 })
 $('#update').click(function() {
-	var id = $('#bid').val();
+	var id = $('#bid').html();
 	var name = $('#name').val();
 	var address = $('#address').val();
 	var info = $('#info').val();

@@ -3,6 +3,10 @@
 
 <title>甜品预订</title>
 <%@include file="../nav.jsp"%>
+
+<br/>
+<br/>
+
 <form action="addgoods" method="post" class="sale_add">
 	<div class="col-md-1"></div>
 	<div class="col-md-2">商品id:</div>

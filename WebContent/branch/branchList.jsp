@@ -2,7 +2,10 @@
     pageEncoding="UTF-8"%>
 <title>门店信息</title>
 <%@include file="../nav.jsp" %>
-<div class="form_info">
+<br/>
+<br/>
+<div class="main_container">
+	<p class="position">首页 > 门店信息</p>
 	<%
 		if (session.getAttribute("employee") != null) {
 	%>
@@ -47,47 +50,43 @@
         <h4 class="modal-title" id="nameTitle">Name</h4>
       </div>
       <div class="modal-body">
+      	<p class="col-xs-3 info_label">店铺id:</p>
+        <p id="bid" class="col-xs-offset-1 col-xs-8"></p>
+      	<s:if test="#session.employee != null && (#session.employee.authority == 0 || #session.employee.authority == 1)">
         <form method="post" action="changeGoodsInfo">
-        	店铺id:<input type="text" id="bid" name="bid" value="test" class="form-control login-field" disabled="disabled"/>
-			店名:<input type="text" id="name" name="name" value="test" class="form-control login-field"
-			<%
-				if(session.getAttribute("employee") == null){
-			%>
-			disabled="disabled"
-			<%} else{ %>
-			<s:if test="#session.employee.authority != 0 && #session.employee.authority != 1">disabled="disabled"</s:if>
-			<%} %>
-			/>
-			地址:<input type="text" id="address" name="address" value="test" class="form-control login-field"
-			<%
-				if(session.getAttribute("employee") == null){
-			%>
-			disabled="disabled"
-			<%} else{ %>
-			<s:if test="#session.employee.authority != 0 && #session.employee.authority != 1">disabled="disabled"</s:if>
-			<%} %>
-			/>
-			基本信息:<textarea cols="10" class="form-control" name="info" id="info" 
-			<%
-				if(session.getAttribute("employee") == null){
-			%>
-			disabled="disabled"
-			<%} else{ %>
-			<s:if test="#session.employee.authority != 0 && #session.employee.authority != 1">disabled="disabled"</s:if>
-			<%} %>
-			>test</textarea>
+        	<br/><br/>
+        	<label class="col-xs-3 info_label" for="name">店名:</label>
+			<input type="text" id="name" name="name" value="test" class="form-control login-field col-xs-offset-1 col-xs-8" style="width:340px"/>
+			<br/><br/>
+			<label class="col-xs-3 info_label" for="address">地址:</label>
+			<input type="text" id="address" name="address" value="test" class="form-control login-field col-xs-offset-1 col-xs-8" style="width:340px"/>
+			<br/><br/>
+			<label class="col-xs-3 info_label" for="info">基本信息:</label>
+			<textarea cols="10" class="form-control col-xs-offset-1 col-xs-8" name="info" id="info" style="width:340px">test</textarea>
+			<br/><br/>
 		</form>
+		</s:if>
+		<s:else>
+			<p class="col-xs-3 info_label">店名:</p>
+        	<p id="name" class="col-xs-offset-1 col-xs-8"></p>
+        	<br/><br/>
+        	<p class="col-xs-3 info_label">地址:</p>
+        	<p id="address" class="col-xs-offset-1 col-xs-8"></p>
+        	<br/><br/>
+      		<p class="col-xs-3 info_label">基本信息:</p>
+        	<p id="info" class="col-xs-offset-1 col-xs-8"></p>
+        	<br/><br/>
+		</s:else>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">我了解了</button>
-        <%
-			if(session.getAttribute("employee") != null){
-		%>
-			<s:if test="#session.employee.authority == 0 || #session.employee.authority == 1">
-				<button type="button" class="btn btn-primary" name="update" id="update">保存更改信息</button>
-				<button type="button" class="btn btn-danger" name="delete" id="delete">删除店面</button>
-			</s:if>
-		<%} %>
+      	<s:if test="#session.employee != null && (#session.employee.authority == 0 || #session.employee.authority == 1)">
+        	<button type="button" class="btn btn-default col-xs-offset-4 col-xs-2" data-dismiss="modal">我了解了</button>
+			<button type="button" class="btn btn-primary col-xs-offset-1 col-xs-3" name="update" id="update">保存更改信息</button>
+			<button type="button" class="btn btn-danger col-xs-offset-1 col-xs-2" name="delete" id="delete">删除店面</button>
+		</s:if>
+		<s:else>
+			<button type="button" class="btn btn-default col-xs-offset-10 col-xs-2" data-dismiss="modal">我了解了</button>
+		</s:else>
       </div>
     </div>
   </div>
