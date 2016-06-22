@@ -6,10 +6,10 @@
 <br/>
 <div class="main_container">
 	<p class="position">首页 > 计划制定</p>
-	<div class="alert alert-success" role="alert">添加成功</div>
-	<div class="alert alert-success" role="alert">添加失败</div>
-	<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">可消失的弹出框</a>
 	<div class="form_info">
+		<div class="alert alert-success form_alert" role="alert" id="success">请添加商品</div>
+		<div class="alert alert-danger form_alert" role="alert" id="fail" style="display:none;">添加失败</div>
+		<br/>
 		<form action="" method="post" >
 			<div class="form-group has-feedback">
 				<div class="col-md-3">商品id:</div>

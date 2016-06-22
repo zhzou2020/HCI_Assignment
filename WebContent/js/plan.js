@@ -26,6 +26,8 @@ $('#b-id').change(function(){
 			$("#b_name").html(dataRole['name']);
 		},
 		error:function(){
+			$("#fail").html("failed");
+			$("#fail").css("display", "block");
 			alert("failed");
 		}
 	})
@@ -50,7 +52,15 @@ $('#addItem').click(function(){
 		data:{'gid':gid, 'price':price, 'number':number},
 		success:function(data){
 			var dataRole = $.parseJSON(data["result"]);
-			alert(dataRole['message']);
+			if(dataRole['message'] == "添加成功！"){
+				$("#success").html(dataRole['message']);
+				$("#success").css('display', "block");
+				$("#fail").css("display", "none");
+			} else{
+				$("#fail").html(dataRole['message']);
+				$("#fail").css('display', "block");
+				$("#success").css("display", "none");
+			}
 			if(dataRole['result'] == "true"){
 				$("#planitems").append(
 						"<tr><td>" +gid+ "</td><td>" + price + "</td><td>" + number + "</td><td><button class=\"btn btn-primary d_info\" data-id=" +
@@ -59,7 +69,9 @@ $('#addItem').click(function(){
 			}
 		},
 		error:function(){
-			alert("failed");
+			$("#fail").html("服务器错误");
+			$("#fail").css('display', "block");
+			$("#success").css("display", "none");
 		}
 	})
 })

@@ -359,3 +359,9 @@ p{
 	margin-top: 30px !important;
 	margin-left: 20px !important;
 }
+
+.form_alert{
+	margin-left:7px;
+	margin-bottom:0px;
+	width:350px;
+}
