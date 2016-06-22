@@ -2,24 +2,28 @@
     pageEncoding="UTF-8"%>
 <title>员工列表</title>
 <%@include file="../nav.jsp" %>
-<div class="form_info">
+
+<br/>
+<br/>
+<div class="main_container">
+	<p class="position">首页 > 计划查看</p>
+	<div class="form_info2">
 	<%
 		if (session.getAttribute("employee") != null) {
 	%>
 	<s:if test="#session.employee.authority == 0">
 	<div class="col-md-10">
 	</div>
-	<button class="btn btn-primary"
+	<button class="btn btn-primary" id="add_new_item"
 		onclick="javascript:window.location.href='addEmployee.jsp'">添加新员工</button>
-	<br/>
-	<br/>
 	</s:if>
 	<%
 		}
 	%>
+	<br/><br/>
 	<table class="table table-responsive table-hover">
 		<tr>
-			<th>员工id</th>
+			<th>员工编号</th>
 			<th>员工姓名</th>
 			<th>员工职位</th>
 			<th>所属分店编号</th>
@@ -61,7 +65,9 @@
 			</tr>
 		</s:iterator>
 	</table>
+	</div>
 </div>
+
 </body>
 </html>
 <script src="../js/jquery.js"></script>

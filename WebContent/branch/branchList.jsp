@@ -23,32 +23,17 @@
 
 		<s:iterator id="branch" value="#session['branchlist']">
 			<div class="branch_info">
-				<div class="row-fluid">
-					<div class="col-md-6">
-						<%-- <div class="id">
-							<s:property value="#branch['id']" />
-						</div> --%>
-						<div class="branch_name">
-							<s:property value="#branch['name']" />
-						</div>
-						<div class="branch_address">
-							<s:property value="#branch['address']" />
-						</div>
-					</div>
-					<div class="col-md-6">
-						<button class="btn btn-primary g_info" data-toggle="modal"
-						data-id="<s:property value="#branch['id']"/>" data-target="#myModal">查看详情</button>
-					</div>
+				<%-- <div class="id">
+					<s:property value="#branch['id']" />
+				</div> --%>
+				<div class="branch_name">
+					<s:property value="#branch['name']" />
+				</div>
+				<div class="branch_address">
+					15850532960
+				<s:property value="#branch['address']" />
 				</div>
 			</div>
-<%-- 			<tr>
-				<td><s:property value="#branch['id']" /></td>
-				<td><s:property value="#branch['name']" /></td>
-				<td><s:property value="#branch['address']" /></td>
-				<td><button class="btn btn-primary b_info" data-toggle="modal" data-id="<s:property value="#branch['id']"/>" data-target="#myModal">
- 					 查看详情
-				</button></td>
-			</tr> --%>
 		</s:iterator>
 	</div>
 </div>

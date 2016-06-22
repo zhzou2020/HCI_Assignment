@@ -90,7 +90,7 @@
         			<p class="col-md-4">
         				店名:
         			</p>
-        			<p class="col-md-6" id="b_name"></p>
+        			<p class="col-md-6" id="b_name"><s:property value="#session['bname1']"/></p>
 					<br/>
         			<br/>
         			<p class="col-md-4">

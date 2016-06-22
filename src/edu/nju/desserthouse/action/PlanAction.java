@@ -48,6 +48,7 @@ public class PlanAction extends BaseAction{
 		session.put("plan_end_date", end_date);
 		session.put("gname1", list.get(0).getName());
 		session.put("gprice1", list.get(0).getPrice());
+		session.put("bname1", branchList.get(0).getName());
 		return SUCCESS;
 	}
 	
