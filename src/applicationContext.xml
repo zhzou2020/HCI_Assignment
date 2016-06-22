@@ -23,7 +23,7 @@
 		<property name="url"
 			value="jdbc:mysql://localhost:3306/desserthouse?autoReconnect=true&amp;userUnicode=true&amp;characterEncoding=utf8"/>
 		<property name="username" value="root" />
-		<property name="password" value="okamiji" />
+		<property name="password" value="root" />
 	</bean>
 
 	<!-- 配置sessionFactory -->
