@@ -13,7 +13,6 @@
 	<div id="path" style="display:none"><%=request.getContextPath() %></div>
 	
 	<form method="post" action="#" class="login_info" onsubmit="return ">
-		<p id="login_alert">账号或密码错误!</p>
 		<div class="form-group container has-feedback">
 			<input name="id" type="text" class="form-control login-field"
 				id="id" style="width:270px" placeholder="工号"/>
@@ -22,7 +21,8 @@
 			<input name="password" type="password" class="form-control login-field"
 				id="password" style="width:270px" placeholder="密码"/>
 		</div>
-		<input type="submit" class="btn btn-primary btn-lg" name="submit" id="login"
+		<p id="login_alert">账号或密码错误!</p>
+		<input type="submit" class="btn btn-primary" name="submit" id="login"
 			value="登录" style="width: 270px; margin-left: 15px"/>
 	</form>
 </body>
