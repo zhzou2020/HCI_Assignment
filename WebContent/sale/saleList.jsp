@@ -5,11 +5,13 @@
 
 <br />
 <br />
-<div class="form_info">
-	<table class="table table-responsive table-hover" id="sales">
+<div class="main_container">
+	<p class="position">首页 > 计划查看</p>
+	
+	<table class="table table-responsive table-hover table_position2" id="sales" style="width:1000px;">
 		<tr>
-			<th>订单id</th>
-			<th>店面id</th>
+			<th>订单编号</th>
+			<th>店面编号</th>
 			<th>销售日期</th>
 			<th>总价</th>
 			<th>付款方式</th>
@@ -48,6 +50,7 @@
 			</tr>
 		</s:iterator>
 	</table>
+
 </div>
 
 <!-- Modal -->

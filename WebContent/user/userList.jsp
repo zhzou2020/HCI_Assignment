@@ -2,10 +2,14 @@
     pageEncoding="UTF-8"%>
 <title>会员列表</title>
 <%@include file="../nav.jsp" %>
-<div class="form_info">
-	<table class="table table-responsive table-hover">
+<br/>
+<br/>
+<div class="main_container">
+	<p class="position">首页 > 计划查看</p>
+	
+	<table class="table table-responsive table-hover table_position2" style="width:1000px;">
 		<tr>
-			<th>会员id</th>
+			<th>会员编号</th>
 			<th>会员姓名</th>
 			<th>会员地址</th>
 			<th>会员状态</th>
@@ -23,6 +27,7 @@
 			</tr>
 		</s:iterator>
 	</table>
+	
 </div>
 
 
