@@ -17,6 +17,36 @@ $("#submit").click(function(){
 	})
 });
 
+$(".goods_info").click(function(){
+	var gid = $(this).find('.id').html();
+	var path = $('#path').html();
+	$.ajax({
+		url : "goodsInformation.action",
+		type : 'POST',
+		dataType : 'JSON',
+		data : {
+			'gid' : gid
+		},
+		success : function(data) {
+			var dataRole = $.parseJSON(data["result"]);
+			$('#info_name').html(dataRole['name']);
+			$('#info_img').attr("src", path + dataRole['src']);
+			$('#info_id').html(gid);
+			if(dataRole['ifuser'] == "1"){
+				$('#info_price_user').html(dataRole['price']);
+				$('#info_info_user').html(dataRole['info']);
+			} else{
+				$('#info_price').val(dataRole['price']);
+				$('#info_info').val(dataRole['info']);
+			}
+			$("#myModal").modal('show');
+		},
+		error : function() {
+			alert("failed");
+		}
+	})
+})
+
 $("#update").click(function(){
 	var id = $("#id").val();
 	var name = $("#name").val();
@@ -39,6 +69,7 @@ $("#update").click(function(){
 
 $('body').delegate('.g_info', 'click', function() {
 	var gid = $(this).attr('data-id');
+	var path = $('#path').html();
 	$.ajax({
 		url : "goodsInformation.action",
 		type : 'POST',
@@ -49,7 +80,7 @@ $('body').delegate('.g_info', 'click', function() {
 		success : function(data) {
 			var dataRole = $.parseJSON(data["result"]);
 			$('#info_name').html(dataRole['name']);
-			$('#info_img').attr("src", dataRole['src']);
+			$('#info_img').attr("src", path + dataRole['src']);
 			$('#info_id').html(gid);
 			if(dataRole['ifuser'] == "1"){
 				$('#info_price_user').html(dataRole['price']);

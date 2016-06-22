@@ -18,13 +18,13 @@
 	<%
 		}
 	%>
+	
+	<div id="path" style="display:none"><%=request.getContextPath() %></div>
 
-
-	<div class="main_contianer">
 
 		<s:iterator id="goods" value="#session['goodslist']">
 			<div class="goods_info">
-				<img />
+				<img src="<%=request.getContextPath() %><s:property value="#goods['img']"/>"/>
 				<div class="id">
 					<s:property value="#goods['id']" />
 				</div>
@@ -56,7 +56,7 @@
 			<div class="modal-body f-14 single_goods_info">
 				<img src="#" id="info_img"/>
 				<form class="p_container form-inline">
-					<p class="col-xs-5 info_label">甜品id:</p>
+					<p class="col-xs-5 info_label">甜品编号:</p>
 					<p id="info_id" class="col-xs-offset-1 col-xs-6 info_tag"></p>
 					<br />
 					<%
@@ -95,7 +95,6 @@
 				<button type="button" class="btn btn-primary" data-dismiss="modal">我知道了</button>
 			</div>
 		</div>
-	</div>
 </div>
 </body>
 </html>

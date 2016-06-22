@@ -99,7 +99,7 @@ public class GoodsAction extends BaseAction{
 		} else{
 			ifuser = "0";
 		}
-		result = "{\"name\":\"" + name + "\", \"price\":\"" + price + "\", \"info\":\"" + description + "\", \"ifuser\":\"" + ifuser + "\"}";
+		result = "{\"name\":\"" + name + "\", \"price\":\"" + price + "\", \"src\":\"" + goods.getImg() + "\", \"info\":\"" + description + "\", \"ifuser\":\"" + ifuser + "\"}";
 		return "result";
 	}
 	

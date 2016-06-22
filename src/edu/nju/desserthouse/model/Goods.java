@@ -44,6 +44,10 @@ public class Goods implements Serializable{
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	public String getImg(){
+		String jpg = "/img/" + Integer.toString(id % 10 + 1) + ".jpg";
+		return jpg;
+	}
 	public String getInfo() {
 		return info;
 	}
