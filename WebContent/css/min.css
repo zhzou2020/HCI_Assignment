@@ -370,3 +370,7 @@ p{
 	margin-left:835px;
 	
 }
+
+.branch_info >.id{
+	display:none;
+}

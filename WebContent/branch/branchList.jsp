@@ -23,9 +23,7 @@
 
 		<s:iterator id="branch" value="#session['branchlist']">
 			<div class="branch_info">
-				<%-- <div class="id">
-					<s:property value="#branch['id']" />
-				</div> --%>
+				<div class="id"><s:property value="#branch['id']" /></div>
 				<div class="branch_name">
 					<s:property value="#branch['name']" />
 				</div>

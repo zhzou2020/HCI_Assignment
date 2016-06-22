@@ -10,7 +10,7 @@
 
 	<table class="table table-responsive table-hover sale_table" id="saleitems">
 		<tr>
-			<th>商品id</th>
+			<th>商品编号</th>
 			<th>商品单价</th>
 			<th>商品数量</th>
 			<%

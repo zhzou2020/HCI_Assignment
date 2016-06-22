@@ -1,6 +1,30 @@
 $('.branch_info').click(function(){
-	$('#myModal').modal('show');
+	var bid = $(this).find('.id').html();
+	$.ajax({
+		url : "branchInformation.action",
+		type : 'POST',
+		dataType : 'JSON',
+		data : {
+			'bid' : bid
+		},
+		success : function(data) {
+			var dataRole = $.parseJSON(data["result"]);
+			$('#nameTitle').html(dataRole['name']);
+			$('#id').html(dataRole['id']);
+			$('#bid').html(dataRole['id']);
+			$('#name').val(dataRole['name']);
+			$('#name').html(dataRole['name']);
+			$('#address').val(dataRole['address']);
+			$('#address').html(dataRole['address']);
+			$('#info').html(dataRole['info']);
+			$('#myModal').modal('show');
+		},
+		error : function() {
+			alert("failed");
+		}
+	})
 })
+
 $('body').delegate('.b_info', 'click', function() {
 	var bid = $(this).attr('data-id');
 	$.ajax({

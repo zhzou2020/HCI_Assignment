@@ -19,8 +19,6 @@
 	%>
 	
 	<div id="path" style="display:none"><%=request.getContextPath() %></div>
-
-
 		<s:iterator id="goods" value="#session['goodslist']">
 			<div class="goods_info">
 				<img src="<%=request.getContextPath() %><s:property value="#goods['img']"/>"/>
