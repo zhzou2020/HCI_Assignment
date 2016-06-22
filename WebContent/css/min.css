@@ -66,6 +66,56 @@ p{
 	margin:7px 10px 0 100px;
 }
 
+.branch_info {
+	position: relative;
+	float: left;
+	display: inline-block;
+	margin: 10px 20px 10px 20px;
+	width: 800px;
+	height: 100px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	background-color: white;
+}
+
+.branch_info:hover {
+	border: 1px dashed;
+	border-color: grey;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+}
+
+.branch_info > .row-fluid > .col-md-6 > .branch_name{
+	margin-top: 15px;
+	padding-right: 10px;
+	color: grey;
+	text-align: left;
+	font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑',
+		Arial, sans-serif;
+}
+
+.branch_info > .row-fluid > .col-md-6 > .branch_address {
+	padding-right: 10px;
+	margin-top: 10px;
+	color: rgba(0, 0, 0, .4);
+	text-align: left;
+	font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑',
+		Arial, sans-serif;
+	font-size: 12px;
+}
+
+.branch_info > .row-fluid > .col-md-6 > button{
+	margin:50px 10px 0 200px;
+}
+
 .single_goods_info{
 	overflow:auto;
 }
