@@ -11,11 +11,6 @@
 			<result name="success">/user/RegUser.jsp</result>
 			<result name="input">/user/register.jsp</result>
 		</action>
-
-		<action name="login" class="edu.nju.desserthouse.action.LoginAction">
-			<result name="success">/user/RegUser.jsp</result>
-			<result name="input">/user/Login.jsp</result>
-		</action>
 		
 		<action name="logout" class="edu.nju.desserthouse.action.LoginAction" method="logout">
 			<result name="success">/user/Login.jsp</result>
@@ -114,6 +109,9 @@
 	</package>	
 	
 	<package name="ajax_json" extends="json-default">
+		<action name="login" class="edu.nju.desserthouse.action.LoginAction">
+			<result name="result" type="json"/>
+		</action>
 		<action name="addgoods" class="edu.nju.desserthouse.action.GoodsAction" method="addGoods">
 			<result name="result" type="json"/>
 		</action>

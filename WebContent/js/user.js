@@ -87,6 +87,26 @@ $("#pointChange").click(function(){
 	})
 })
 
+$('#login').click(function(){
+	var phoneNo = $('#phoneNo').val();
+	var password = $('#password').val();
+	$.ajax({
+		url: "login.action",
+		type: 'POST',
+		dataType: 'JSON',
+		data:{"phoneNo":phoneNo, "password":password},
+		success:function(data){
+			alert(data['result']);
+		},
+		error:function(){
+			alert("failed");
+		}
+	})
+	return false;
+})
+
+
+
 //$("#saleRecord").click(function(){
 //	var mid = $("#mid").val();
 //	console.log(mid);

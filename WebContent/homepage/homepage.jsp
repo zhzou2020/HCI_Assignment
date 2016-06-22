@@ -114,7 +114,7 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="first-slide" src="/images/homepage-image.jpg" alt="First slide">
+                <img class="first-slide" src="<%=request.getContextPath() %>/resource/homepage-image.jpg" alt="First slide">
                 <div class="container">
                     <div class="carousel-caption">
                     	<h1>测试巨幕heading1</h1>
@@ -123,7 +123,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="second-slide" src="/images/homepage-image.jpg" alt="Second slide">
+                <img class="second-slide" src="<%=request.getContextPath() %>/images/homepage-image.jpg" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption">
 						<h1>测试巨幕heading2</h1>

@@ -17,22 +17,29 @@ public class LoginAction extends BaseAction{
 	private UserManageService userService;  
 
 	private User user; 
+	private String result;
 	
 	public String execute(){
+		result = null;
 		String phoneNo = request.getParameter("phoneNo");
 		String password = request.getParameter("password");
 		user = userService.validateUser(phoneNo, password);
 		if(user == null){
-			return INPUT;
+			result = "fail";
 		} else{
 			session.put("user", user);
 			session.remove("employee");
-			return SUCCESS;
+			result = "success";
 		}
+		return "result";
 	}
 	
 	public String logout(){
 		session.remove("user");
 		return SUCCESS;
+	}
+	
+	public String getResult(){
+		return this.result;
 	}
 }
