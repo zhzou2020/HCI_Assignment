@@ -1,3 +1,6 @@
+$('.branch_info').click(function(){
+	$('#myModal').modal('show');
+})
 $('body').delegate('.b_info', 'click', function() {
 	var bid = $(this).attr('data-id');
 	$.ajax({
