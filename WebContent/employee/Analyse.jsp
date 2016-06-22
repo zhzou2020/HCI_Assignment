@@ -4,13 +4,12 @@
 <title>月度统计</title>
 <%@include file="../nav.jsp"%>
 
-<div class="personal-info">
-    <h1>月度统计</h1>
-    <hr align=center width=210 size="3"/>
-</div>
+<br/>
+<br/>
+<div class="main_container">
+	<p class="position">首页 > 计划查看</p>
 
-<div class = "left-list-admin">
-    <ul>
+    <ul class="nav nav-tabs">
         <li><a href="#canvastag">会员地域</a></li>
         <li><a href="#gendertag">会员性别</a></li>
         <li><a href="#cardstatetag">会员状态</a></li>
@@ -19,7 +18,7 @@
         <li><a href="#branchsaletag">分店销售</a></li>
         <li><a href="#hotgoods">热卖商品</a></li>
     </ul>
-</div>
+
 	<div class="canvas_position">
 		<h4 id="branchsaletag">分店销售</h4>
 		<canvas id="branchsale"></canvas>
@@ -49,6 +48,7 @@
 		<div class="col-md-2">名称</div>
 		<div class="col-md-2">奶昔</div>
 	</div>
+</div>
 
 </body>
 </html>
