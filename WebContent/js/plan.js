@@ -10,7 +10,9 @@ $('#gid').change(function(){
 			$("#price").val(dataRole['price']);
 		},
 		error:function(){
-			alert("failed");
+			$("#fail").html("服务器错误");
+			$("#fail").css('display', "block");
+			$("#success").css("display", "none");
 		}
 	})
 })
@@ -26,9 +28,9 @@ $('#b-id').change(function(){
 			$("#b_name").html(dataRole['name']);
 		},
 		error:function(){
-			$("#fail").html("failed");
-			$("#fail").css("display", "block");
-			alert("failed");
+			$("#fail").html("服务器错误");
+			$("#fail").css('display', "block");
+			$("#success").css("display", "none");
 		}
 	})
 })
@@ -136,11 +138,11 @@ $('body').delegate('.p_info', 'click', function() {
 			console.log(data['result']);
 			$("#planitems  tr:not(:first)").html("");
 			var append = "";
-			$("#p_id").val(dataRole['plan']['id']);
-			$("#b_id").val(dataRole['plan']['bid']);
-			$("#e_id").val(dataRole['plan']['eid']);
-			$("#start_date_modal").val(dataRole['plan']['start_date']);
-			$("#end_date_modal").val(dataRole['plan']['end_date']);
+			$("#p_id").html(dataRole['plan']['id']);
+			$("#b_id").html(dataRole['plan']['bid']);
+			$("#e_id").html(dataRole['plan']['eid']);
+			$("#start_date_modal").html(dataRole['plan']['start_date']);
+			$("#end_date_modal").html(dataRole['plan']['end_date']);
 			for(var i = 0; i != dataRole['items'].length; i ++){
 				append += "<tr><td>" + dataRole['items'][i]['gid'] + "</td><td>" + dataRole['items'][i]['price'] + "</td><td>" + dataRole['items'][i]['number'] + "</td></tr>" ;
 			}

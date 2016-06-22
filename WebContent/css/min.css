@@ -93,7 +93,7 @@ p{
 	border-radius: 7px;
 }
 
-.branch_info > .row-fluid > .col-md-6 > .branch_name{
+.branch_info > .branch_name{
 	margin-top: 15px;
 	padding-right: 10px;
 	color: grey;
@@ -102,7 +102,7 @@ p{
 		Arial, sans-serif;
 }
 
-.branch_info > .row-fluid > .col-md-6 > .branch_address {
+.branch_info >.branch_address {
 	padding-right: 10px;
 	margin-top: 10px;
 	color: rgba(0, 0, 0, .4);
@@ -112,7 +112,7 @@ p{
 	font-size: 12px;
 }
 
-.branch_info > .row-fluid > .col-md-6 > button{
+.branch_info > button{
 	margin:50px 10px 0 200px;
 }
 
@@ -364,4 +364,9 @@ p{
 	margin-left:7px;
 	margin-bottom:0px;
 	width:350px;
+}
+
+#add_new_item{
+	margin-left:835px;
+	
 }
