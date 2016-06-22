@@ -25,11 +25,11 @@
 				<br />
 				<br />
 				<div class="col-md-3">商品名称:</div>
-				<p class="col-md-8" id="gname"></p>
+				<p class="col-md-8" id="gname"><s:property value="#session['gname1']"/></p>
 				<br /> <br />
 				<div class="col-md-3">商品价格:</div>
 				<div class="col-md-6">
-					<input type="text" name="price" id="price" class="form-control" />
+					<input type="text" name="price" id="price" class="form-control" value="<s:property value="#session['gprice1']"/>"/>
 				</div>
 				<br /> <br />
 				<div class="col-md-3">商品数量:</div>
