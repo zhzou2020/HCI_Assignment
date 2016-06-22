@@ -371,6 +371,12 @@ p{
 	
 }
 
+#login_alert{
+	visibility:hidden;
+	margin-left:20px;
+	color:#ef565d;
+}
+
 .branch_info >.id{
 	display:none;
 }

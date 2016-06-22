@@ -79,10 +79,6 @@
 	</package>
 	
 	<package name="employee" namespace="/employee" extends="struts-default">
-		<action name="login" class="edu.nju.desserthouse.action.EmployeeAction" method="Login">
-			<result name="success">/employee/FrontPage.jsp</result>
-			<result name="input">/employee/Login.jsp</result>
-		</action>
 		<action name="logout" class="edu.nju.desserthouse.action.EmployeeAction" method="Logout">
 			<result name="success">/employee/Login.jsp</result>
 		</action>
@@ -110,6 +106,9 @@
 	
 	<package name="ajax_json" extends="json-default">
 		<action name="login" class="edu.nju.desserthouse.action.LoginAction">
+			<result name="result" type="json"/>
+		</action>
+		<action name="loginEmployee" class="edu.nju.desserthouse.action.EmployeeAction" method="Login">
 			<result name="result" type="json"/>
 		</action>
 		<action name="addgoods" class="edu.nju.desserthouse.action.GoodsAction" method="addGoods">

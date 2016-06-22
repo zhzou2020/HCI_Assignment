@@ -12,7 +12,10 @@
 		</ul>
 	</div>
 	
+	<div id="path" style="display:none"><%=request.getContextPath() %></div>
+	
 	<form method="post" action="#" class="login_info" onsubmit="return ">
+		<p id="login_alert">账号或密码错误!</p>
 		<div class="form-group container has-feedback">
 			<input name="phoneNo" type="text" class="form-control login-field"
 				id="phoneNo" style="width:270px" placeholder="账号"/>

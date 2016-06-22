@@ -26,16 +26,18 @@ public class EmployeeAction extends BaseAction{
 	private String result;
 	
 	public String Login(){
+		result = null;
 		String id = request.getParameter("id");
 		String password = request.getParameter("password");
 		employee = employeeService.validate(id, password);
 		if(employee == null){
-			return INPUT;
+			result = "fail";
 		} else{
 			session.put("employee", employee);
 			session.remove("user");
-			return SUCCESS;
+			result = "success";
 		}
+		return "result";
 	}
 	
 	public String Logout(){
