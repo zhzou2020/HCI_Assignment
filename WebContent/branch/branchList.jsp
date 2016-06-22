@@ -10,9 +10,7 @@
 		if (session.getAttribute("employee") != null) {
 	%>
 	<s:if test="#session.employee.authority == 0">
-		<div class="col-md-10">
-		</div>
-		<button class="btn btn-primary"
+		<button class="btn btn-primary" id="add_new_item" 
 			onclick="javascript:window.location.href='addBranch.jsp'">添加新分店</button>
 		<br/>
 	<br/>

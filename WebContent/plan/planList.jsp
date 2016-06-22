@@ -75,44 +75,34 @@
 			</div>
 			<div class="modal-body">
 				<form>
-					<div class="col-md-4">
+					<p class="col-md-4">
         				计划id:
-        			</div>
-					<div class="col-md-3">
-						<input type="text" id="p_id" name="p_id" value="" class="form-control login-field" disabled="disabled"/>
-        			</div>
+        			</p>
+        			<p class="col-md-8" id="p_id"></p>
         			<br/>
         			<br/>
-					<div class="col-md-4">
+					<p class="col-md-4">
         				店铺id:
-        			</div>
-					<div class="col-md-3">
-						<input type="text" id="b_id" name="b_id" value="" class="form-control login-field" disabled="disabled"/>
-        			</div>
+        			</p>
+        			<p class="col-md-8" id="b_id"></p>
         			<br/>
         			<br/>
-        			<div class="col-md-4">
+        			<p class="col-md-4">
         				制定人id:
-        			</div>
-        			<div class="col-md-6">
-						<input type="text" id="e_id" name="e_id" value="" class="form-control login-field" disabled="disabled"/>
-					</div>
+        			</p>
+        			<p class="col-md-8" id="e_id"></p>
 					<br/>
         			<br/>
-        			<div class="col-md-4">
+        			<p class="col-md-4">
         				计划开始时间:
-        			</div>
-        			<div class="col-md-6">
-						<input type="text" id="start_date_modal"value="" class="form-control login-field" disabled="disabled"/>
-					</div>
+        			</p>
+        			<p class="col-md-8" id="start_date_modal"></p>
 					<br/>
 					<br/>
-					<div class="col-md-4">
+					<p class="col-md-4">
         				计划结束时间:
-        			</div>
-        			<div class="col-md-6">
-						<input type="text" id="end_date_modal" value="" class="form-control login-field" disabled="disabled"/>
-					</div>
+        			</p>
+        			<p class="col-md-8" id="end_date_modal"></p>
 				</form>
 				<br/>
 				<table class="table table-responsive table-hover" id="planitems">

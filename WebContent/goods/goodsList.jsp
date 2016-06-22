@@ -11,9 +11,8 @@
 	<%
 		if (session.getAttribute("employee") != null) {
 	%>
-	<div class="col-md-10"></div>
 	<button class="btn btn-primary"
-		onclick="javascript:window.location.href='addGoods.jsp'">添加新商品</button>
+		onclick="javascript:window.location.href='addGoods.jsp'" id="add_new_item">添加新商品</button>
 	<br /> <br />
 	<%
 		}
