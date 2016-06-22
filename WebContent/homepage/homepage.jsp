@@ -123,7 +123,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="second-slide" src="<%=request.getContextPath() %>/images/homepage-image.jpg" alt="Second slide">
+                <img class="second-slide" src="<%=request.getContextPath() %>/resource/homepage-image.jpg" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption">
 						<h1>测试巨幕heading2</h1>
@@ -145,3 +145,5 @@
 	
 </body>
 </html>
+<script src="../js/jquery.js"></script>
+<script src="../flatui/dist/js/flat-ui.min.js"></script>
