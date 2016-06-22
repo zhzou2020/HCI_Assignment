@@ -3,10 +3,12 @@
 <title>计划列表</title>
 <%@include file="../nav.jsp"%>
 
-<br />
-<br />
+<br/>
+<br/>
+<div class="main_container">
+	<p class="position">首页 > 计划查看</p>
 
-	<table class="table table-responsive table-hover table_position" id="plans">
+	<table class="table table-responsive table-hover table_position2" id="plans">
 		<tr>
 			<th>计划id</th>
 			<th>店面id</th>
@@ -44,6 +46,11 @@
 				<s:if test="#session.employee.authority == 2 and #plan['state'] == -1">
 					<td>
 						<button class="btn btn-primary modify_plan" data-id="<s:property value="#plan['id']"/>" onclick="javascript:window.location.href='modifyPlan?id=<s:property value="#plan['id']"/>';">修改计划</button>
+					</td>
+				</s:if>
+				<s:if test="#session.employee.authority == 2 and #plan['state'] != -1">
+					<td>
+						<button class="btn btn-default modify_plan" disabled="disabled">修改计划</button>
 					</td>
 				</s:if>
 				<%
