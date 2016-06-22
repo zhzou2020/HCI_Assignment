@@ -312,9 +312,13 @@ public class SaleAction extends BaseAction {
 		session.put("dateset", date_set);
 
 		List<Branch> branchlist = branchService.getValidBranch();
-
+		Branch b1 = branchlist.get(0);
+		
 		session.put("branchlist", branchlist);
-
+		session.put("bname1", b1.getName());
+		session.put("baddr1", b1.getAddress());
+		session.put("binfo1", b1.getInfo());
+		
 		return SUCCESS;
 	}
 

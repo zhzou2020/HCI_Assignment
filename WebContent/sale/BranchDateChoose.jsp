@@ -34,16 +34,19 @@
 		<div class="col-md-3"></div>
 		<div class="col-md-3">店名:</div>
 		<div class="col-md-3" id="b_name">
+		<s:property value="#session['bname1]"/>
 		</div>
 		<br /> <br />
 		<div class="col-md-3"></div>
 		<div class="col-md-3">地址:</div>
 		<div class="col-md-3" id="b_addr">
+		<s:property value="#session['baddr1']"/>
 		</div>
 		<br/><br/>
 		<div class="col-md-3"></div>
 		<div class="col-md-3">简介:</div>
 		<div class="col-md-3" id="b_info">
+		<s:property value="#session['binfo1']"/>
 		</div>
 		<br /> <br />
 		<div class="col-md-8"></div>
