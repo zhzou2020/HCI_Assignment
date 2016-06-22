@@ -1,6 +1,7 @@
 package edu.nju.desserthouse.model;
 
 import java.io.Serializable;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -59,8 +60,19 @@ public class Plan implements Serializable{
 	public Date getEnd_date() {
 		return end_date;
 	}
+	
 	public void setEnd_date(Date end_date) {
 		this.end_date = end_date;
+	}
+	public String getStart_regular() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		System.out.println("start:"+sdf.format(start_date));
+		return sdf.format(start_date);
+	}
+	public String getEnd_regular() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		System.out.println("end:"+sdf.format(end_date));
+		return sdf.format(end_date);
 	}
 	
 	public String json(){
