@@ -1,3 +1,7 @@
+$(function () 
+      { $("[data-toggle='popover']").popover();
+});
+
 $("#submit").click(function(){
 	var name = $("#name").val();
 	var passwordOne = $("#passwordOne").val();

@@ -24,10 +24,21 @@
 		<p id="login_alert">账号或密码错误!</p>
 		<input type="submit" class="btn btn-primary" name="submit" id="login"
 			value="登录" style="width: 270px; margin-left: 15px"/>
+			
+			<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on 顶部
+</button>
+<a href="#" data-toggle="popover" title="Example popover">
+   请悬停在我的上面
+</a>
+<script>$(function () 
+      { $("[data-toggle='popover']").popover();
+      });
+   </script>
 	</form>
 </body>
 </html>
 <script src="../js/jquery.js"></script>
-<script src="../flatui/dist/js/flat-ui.min.js"></script>
-<script src="../flatui/assets/js/application.js"></script>
+<script src="../bootstrap-3.3.5/js/tooltip.js"></script>
+<script src="../bootstrap-3.3.5/js/popover.js"></script>
 <script src="../js/employee.js"></script>"
