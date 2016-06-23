@@ -12,7 +12,7 @@
 	
 	<div id="path" style="display:none"><%=request.getContextPath() %></div>
 	
-	<form method="post" action="#" class="login_info" onsubmit="return ">
+	<form method="post" action="#" class="login_info" onsubmit="return false;">
 		<div class="form-group container has-feedback">
 			<input name="id" type="text" class="form-control login-field"
 				id="id" style="width:270px" placeholder="工号"/>
