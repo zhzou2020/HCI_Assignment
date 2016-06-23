@@ -17,13 +17,12 @@
 	<form method="post" action="#" class="login_info">
 		<div class="form-group container has-feedback">
 			<input name="phoneNo" type="text" class="form-control login-field"
-				id="phoneNo" style="width:270px" placeholder="账号"/>
+				id="phoneNo" style="width:270px" placeholder="账号" data-placement="top" data-content="登录失败"/>
 		</div>
 		<div class="form-group container has-feedback">
 			<input name="password" type="password" class="form-control login-field"
 				id="password" style="width:270px" placeholder="密码"/>
 		</div>
-		<p id="login_alert">账号或密码错误!</p>
 		<button type="button" class="btn btn-primary" id="login" style="width: 270px; margin-left: 15px">登录</button>
 	</form>
 </body>

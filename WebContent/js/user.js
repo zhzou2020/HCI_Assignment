@@ -91,8 +91,9 @@ $('#login').click(function(){
 	var phoneNo = $('#phoneNo').val();
 	var password = $('#password').val();
 	if(isNaN(phoneNo) || phoneNo == ""){
-		$("#login_alert").html("账号应由数字组成，请重新填写～");
-		$("#login_alert").css("visibility", "visible");
+		$("#phoneNo").attr("data-content", "账号应由数字组成，请重新填写～");
+		$("#phoneNo").popover();
+		$("#phoneNo").popover("show");
 	} else{
 		$.ajax({
 			url: "login.action",
@@ -101,11 +102,11 @@ $('#login').click(function(){
 			data:{"phoneNo":phoneNo, "password":password},
 			success:function(data){
 				if(data['result'] == "success"){
-					$("#login_alert").css("visibility", "hidden");
 					window.location.href = $("#path").html() + "/goods/goodslist";
 				} else{
-					$("#login_alert").html("账号或密码错误!");
-					$("#login_alert").css("visibility", "visible");
+					$("#phoneNo").attr("data-content", "账号或密码错误");
+					$("#phoneNo").popover();
+					$("#phoneNo").popover("show");
 				}
 			},
 			error:function(){
