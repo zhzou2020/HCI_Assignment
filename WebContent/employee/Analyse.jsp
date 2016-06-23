@@ -7,46 +7,37 @@
 <br/>
 <br/>
 <div class="main_container">
-	<p class="position">首页 > 计划查看</p>
+	<p class="position">首页 > 月度统计</p>
 
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs nav-stacked position" style="width:200px;margin-right:20px;float:left;">
+        <li><a href="#branchsaletag">分店销售</a></li>
         <li><a href="#canvastag">会员地域</a></li>
         <li><a href="#gendertag">会员性别</a></li>
         <li><a href="#cardstatetag">会员状态</a></li>
         <li><a href="#agetag">会员年龄</a></li>
-        <li><a href="#">会员消费</a></li>
-        <li><a href="#branchsaletag">分店销售</a></li>
-        <li><a href="#hotgoods">热卖商品</a></li>
     </ul>
 
 	<div class="canvas_position">
-		<h4 id="branchsaletag">分店销售</h4>
+		<h5 id="branchsaletag">分店销售</h5>
 		<canvas id="branchsale"></canvas>
 		<br/>
 		<br/>
-		<h4 id="canvastag">会员地域</h4>
+		<h5 id="canvastag">会员地域</h5>
 		<canvas id="canvas"></canvas>
 		<br/>
 		<br/>
-		<h4 id="gendertag">会员性别</h4>
+		<h5 id="gendertag">会员性别</h5>
 		<canvas id="gender"></canvas>
 		<br/>
 		<br/>
-		<h4 id="cardstatetag">会员状态</h4>
+		<h5 id="cardstatetag">会员状态</h5>
 		<canvas id="cardstate"></canvas>
 		<br/>
 		<br/>
-		<h4 id="agetag">会员年龄</h4>
+		<h5 id="agetag">会员年龄</h5>
 		<canvas id="age"></canvas>
 		<br/>
 		<br/>
-		<h4 id="hotgoods">热卖商品</h4>	
-		<div class="col-md-2">id</div>
-		<div class="col-md-2">4</div>
-		<br/>
-		<br/>
-		<div class="col-md-2">名称</div>
-		<div class="col-md-2">奶昔</div>
 	</div>
 </div>
 
