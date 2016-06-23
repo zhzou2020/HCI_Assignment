@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <title>职工登录</title>
+<style>
+	body {background:url(../img/bg.png) top center no-repeat; background-size:cover;}
+</style>
+
 <%@include file="../nav.jsp" %>
 <br/>
 	<div class="login_container">

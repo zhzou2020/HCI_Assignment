@@ -2,11 +2,14 @@
 	pageEncoding="UTF-8"%>
 <title>修改计划</title>
 <%@include file="../nav.jsp"%>
+
+<br/><br/>
+<div class="main_container">
+<p class="position">首页 > 计划修改</p>
 <form action="" method="post" class="form_info">
-	<div class="form-group container has-feedback">
-		<div class="col-md-3"></div>
-		<div class="col-md-2">商品id:</div>
-		<div class="col-md-3">
+	<div class="form-group has-feedback">
+		<div class="col-md-3">商品编号:</div>
+		<div class="col-md-5">
 			<select data-toggle="select" name="gid" id="gid"
 				class="form-control select select-default mrs mbm">
 				<s:iterator id="goods" value="#session['goodslist']">
@@ -17,49 +20,46 @@
 		</div>
 		<br />
 		<br />
-		<div class="col-md-3"></div>
-		<div class="col-md-2">商品名称:</div>
-		<div class="col-md-3">
+		<div class="col-md-3">商品名称:</div>
+		<div class="col-md-6">
 			<input type="text" name="gname" id="gname" class="form-control"
 				disabled="disabled" />
 		</div>
 		<br /> <br />
-		<div class="col-md-3"></div>
-		<div class="col-md-2">商品价格:</div>
-		<div class="col-md-3">
+
+		<div class="col-md-3">商品价格:</div>
+		<div class="col-md-6">
 			<input type="text" name="price" id="price" class="form-control" />
 		</div>
 		<br /> <br />
-		<div class="col-md-3"></div>
-		<div class="col-md-2">商品数量:</div>
-		<div class="col-md-3">
+		
+		<div class="col-md-3">商品数量:</div>
+		<div class="col-md-6">
 			<input type="text" id="number" name="number" value="10"
 				class="form-control">
 		</div>
-		<br /> <br />
-		<div class="col-md-6"></div>
-		<div class="col-md-2">
+		<div class="col-md-3"></div>
+		<br/> <br/><br/>
+		
+		<div class="col-md-offset-1 col-md-4">
+			<s:reset value="重新输入" class="btn btn-default btn-block" />
+		</div>
+		<div class="col-md-4">
 			<input type="button" value="添加商品" id="addItem"
 				class="btn btn-primary btn-block" />
 		</div>
-		<br /> <br />
-		<div class="col-md-6"></div>
-		<div class="col-md-2">
-			<s:reset value="重新输入" class="btn btn-primary btn-block" />
-		</div>
-		<br /> <br />
-		<div class="col-md-6"></div>
+		<br/> <br/><br/>
+		
 		<!-- <div class="col-md-2">
 			<button class="btn btn-primary" id="showPlan" name="showPlan" data-toggle="modal" data-target="#myModal">查看本次计划</button>
 		</div> -->
 		
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<button class="btn btn-primary btn-block" id="showPlan" name="showPlan" data-toggle="modal" data-target="#myModal" style="margin-left:18px;width:160px">查看本次计划</button>
+		</div>
 	</div>
 </form>
-
-<div class="col-md-8"></div>
-<div class="col-md-2">
-	<button class="btn btn-primary btn-block" id="showPlan" name="showPlan" data-toggle="modal" data-target="#myModal" style="margin-left:32px;width:160px">查看本次计划</button>
-</div>
 		
 
 <!-- Modal -->
@@ -154,6 +154,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 </body>
 </html>

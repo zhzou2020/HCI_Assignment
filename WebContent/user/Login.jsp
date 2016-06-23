@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
+<style>
+	body {background:url(../img/bg.png) top center no-repeat; background-size:cover;}
+</style>
 
 <title>登录</title>
 	<%@include file="../nav.jsp"  %>
@@ -25,6 +28,7 @@
 		</div>
 		<button type="button" class="btn btn-primary" id="login" style="width: 270px; margin-left: 15px">登录</button>
 	</form>
+	
 </body>
 </html>
 <script src="../js/jquery.js"></script>

@@ -1,4 +1,4 @@
-$('.branch_info').click(function(){
+$('.goods_info').click(function(){
 	var bid = $(this).find('.id').html();
 	$.ajax({
 		url : "branchInformation.action",

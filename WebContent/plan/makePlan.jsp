@@ -6,13 +6,12 @@
 <br/>
 <div class="main_container">
 	<p class="position">首页 > 计划制定</p>
+	<div class="alert alert-success form_alert" role="alert" id="success">请添加商品</div>
+	<div class="alert alert-danger form_alert" role="alert" id="fail" style="display:none;">添加失败</div>
 	<div class="form_info">
-		<div class="alert alert-success form_alert" role="alert" id="success">请添加商品</div>
-		<div class="alert alert-danger form_alert" role="alert" id="fail" style="display:none;">添加失败</div>
-		<br/>
 		<form action="" method="post" >
 			<div class="form-group has-feedback">
-				<div class="col-md-3">商品id:</div>
+				<div class="col-md-3">商品编号:</div>
 				<div class="col-md-5">
 					<select data-toggle="select" name="gid" id="gid"
 						class="form-control select select-primary mrs mbm">
@@ -37,7 +36,7 @@
 					<input type="text" id="number" name="number" value="10"
 						class="form-control">
 				</div>
-				<br /> <br /><br/>
+				<br/><br/><br/>
 				<div class="col-md-offset-1 col-md-4">
 					<s:reset value="重新输入" class="btn btn-default btn-block" />
 				</div>
