@@ -22,13 +22,16 @@
 	<div class="main_contianer">
 
 		<s:iterator id="branch" value="#session['branchlist']">
-			<div class="branch_info">
+			<div class="goods_info">
+				<img src="<%=request.getContextPath() %><s:property value="#branch['img']"/>"/>
 				<div class="id"><s:property value="#branch['id']" /></div>
-				<div class="branch_name">
+				<div class="goods_name">
 					<s:property value="#branch['name']" />
 				</div>
-				<div class="branch_address">
+				<div class="price">
 					15850532960
+				</div>
+				<div class="price">
 				<s:property value="#branch['address']" />
 				</div>
 			</div>

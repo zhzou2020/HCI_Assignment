@@ -50,6 +50,11 @@ public class Branch implements Serializable{
 	public void setState(int state) {
 		this.state = state;
 	}
+	
+	public String getImg(){
+		String jpg = "/img/b" + Integer.toString(id % 10 + 1) + ".jpg";
+		return jpg;
+	}
 	public String json(){
 		String result = "{\"id\":\"" + this.id + "\", \"name\":\"" + this.name + "\", \"address\":\"" + 
 				address + "\", \"info\":\"" + this.info + "\",\"state\":\"" + state  + "\"}";
