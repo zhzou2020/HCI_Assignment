@@ -10,9 +10,9 @@
 <div class="main_container">
 	<p class="position">首页 > 选取预定分店和日期 > 甜品预定</p>
 	
-	<table class="table table-responsive table-hover sale_table" id="saleitems">
+	<table class="table table-responsive table-hover sale_table" id="saleitems" style="width:560px;">
 		<tr>
-			<th>商品id</th>
+			<th>商品编号</th>
 			<th>商品单价</th>
 			<th>商品数量</th>
 			<%
@@ -44,7 +44,7 @@
 		</s:iterator>
 	</table>
 	<form action="addgoods" method="post" class="sale_add">
-		<div class="col-xs-offset-1 col-xs-3">商品id:</div>
+		<div class="col-xs-offset-1 col-xs-3">商品编号:</div>
 		<div class="col-xs-8">
 			<select data-toggle="select" name="gid" id="gid"
 				class="form-control select select-default mrs mbm">
@@ -57,12 +57,12 @@
 		<br /> <br />
 		<div class="col-xs-offset-1 col-xs-3">商品名称:</div>
 		<div class="col-xs-8" id="gname">
-			<s:property value="#session.stockname" />
+			<s:property value="#session['stockname']" />
 		</div>
 		<br /> <br />
 		<div class="col-xs-offset-1 col-xs-3">商品库存:</div>
 		<div class="col-xs-8" id="stock">
-			<s:property value="#session.stocknumber" />
+			<s:property value="#session['stocknumber']" />
 		</div>
 		<br /> <br />
 		<div class="col-xs-offset-1 col-xs-3">销售数量:</div>
@@ -102,13 +102,13 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">销售信息</h4>
-        <p class="modal-title">销售分店id：</p>
+        <p class="modal-title">销售分店编号：</p>
       </div>
       <div class="modal-body">
         <form method="post" action="#">
         	需付款：<div id="amount"><s:property value="#session.amount"/></div>
 			<br/>
-			会员id：<div id="memberid"><s:property value="#session.user.serialid"/></div>
+			会员编号：<div id="memberid"><s:property value="#session.user.serialid"/></div>
 			<br/>
 			会员姓名：<div id="membername"><s:property value="#session.user.name"/></div>
 			<br/>

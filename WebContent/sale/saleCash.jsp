@@ -60,12 +60,12 @@
 		<br /> <br />
 		<div class="col-xs-offset-1 col-xs-3">商品名称:</div>
 		<div class="col-xs-8" id="gname">
-			<s:property value="#session.stockname" />
+			<s:property value="#session['stockname']" />
 		</div>
 		<br /> <br />
 		<div class="col-xs-offset-1 col-xs-3">商品库存:</div>
 		<div class="col-xs-8" id="stock">
-			<s:property value="#session.stocknumber" />
+			<s:property value="#session['stocknumber']" />
 		</div>
 		<br /> <br />
 		<div class="col-xs-offset-1 col-xs-3">销售数量:</div>
