@@ -14,7 +14,6 @@ $("#addSaleItem").click(function(){
 			data:{"number":number, "gid":gid},
 			success:function(data){
 				var dataRole = $.parseJSON(data['result']);
-				alert(dataRole['message']);
 				if(dataRole['result'] == "true"){
 					var append = "<tr><td>" +gid+ "</td><td>" + dataRole['price'] + "</td><td>" + number + "</td><td><button class=\"btn btn-primary d_info\" data-id=" +
 					"\"" + gid + "\"" + ">删除条目</button></td></tr>";
@@ -45,7 +44,6 @@ $("#addSaleItem_pre").click(function(){
 			data:{"number":number, "gid":gid},
 			success:function(data){
 				var dataRole = $.parseJSON(data['result']);
-				alert(dataRole['message']);
 				if(dataRole['result'] == "true"){
 					var append = "<tr><td>" +gid+ "</td><td>" + dataRole['price'] + "</td><td>" + number + "</td><td><button class=\"btn btn-primary d_info\" data-id=" +
 					"\"" + gid + "\"" + ">删除条目</button></td></tr>";
@@ -70,9 +68,10 @@ $('body').delegate('.d_info', 'click', function() {
 		success:function(data){
 			if(data['result'] != null){
 				var dataRole = $.parseJSON(data['result']);
-				alert(dataRole['message']);
-				tr.remove();
-				$("#totalamount").html(dataRole['amount']);
+				if(dataRole['message'] == "删除成功！"){
+					tr.remove();
+					$("#totalamount").html(dataRole['amount']);
+				}
 			} else{
 				alert("删除失败！");
 			}
@@ -266,14 +265,14 @@ $('body').delegate('.s_info', 'click', function(){
 		dataType: 'JSON',
 		success:function(data){
 			var dataRole = $.parseJSON(data['result']);
-			$("#s_id").val(dataRole['sale']['id']);
-			$("#b_id").val(dataRole['sale']['bid']);
-			$("#s_date").val(dataRole['sale']['date']);
-			$("#salesman_id").val(dataRole['sale']['salesman_id']);
+			$("#s_id").html(dataRole['sale']['id']);
+			$("#b_id").html(dataRole['sale']['bid']);
+			$("#s_date").html(dataRole['sale']['date']);
+			$("#salesman_id").html(dataRole['sale']['salesman_id']);
 			if(dataRole['sale']['pay_way'] == 0){
-				$("#m_id").val("");
+				$("#m_id").html("");
 			} else{
-				$("#m_id").val(dataRole['sale']['mid']);
+				$("#m_id").html(dataRole['sale']['mid']);
 			}
 
 			var state = dataRole['sale']['state'];
@@ -288,7 +287,7 @@ $('body').delegate('.s_info', 'click', function(){
 			}
 			
 			$("#saleitems  tr:not(:first)").html("");
-			$("#state").val(stateshow);
+			$("#state").html(stateshow);
 			var append = "";
 			for(var i = 0; i != dataRole['items'].length; i ++){
 				append += "<tr><td>" + dataRole['items'][i]['gid'] + "</td><td>" + dataRole['items'][i]['price'] + "</td><td>" + dataRole['items'][i]['number'] + "</td></tr>" ;

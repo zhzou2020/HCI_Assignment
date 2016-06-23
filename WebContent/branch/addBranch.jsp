@@ -4,7 +4,8 @@
 <%@include file="../nav.jsp" %>
 <br/>
 	<br/>
-	<br/>
+<div class="main_container">
+	<p class="position">首页 > 门店管理 > 添加新分店</p>
 	<form action="addBranch" method="post" class="form_info">
 		<div class="form-group container has-feedback">
 			<!-- <div class="col-md-3"></div> -->
@@ -24,18 +25,17 @@
 			<div class="col-md-3">
 				<input type="text" name="info" id="info" class="form-control" />
 			</div>
-			<br /> <br />
-			<div class="col-md-3"></div>
+			<br /> <br /><br/>
+			<div class="col-md-1"></div>
+			<div class="col-md-2">
+				<s:reset value="重新输入" class="btn btn-default btn-block" />
+			</div>
 			<div class="col-md-2">
 				<input type="button" value="新增分店" id="add" class="btn btn-primary btn-block" />
 			</div>
-			<br /> <br />
-			<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<s:reset value="重新输入" class="btn btn-primary btn-block" />
-			</div>
 		</div>
 	</form>
+</div>
 </body>
 </html>
 <script src="../js/jquery.js"></script>

@@ -2,37 +2,36 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
+<style type="text/css">
+    .info_la{
+    	text-align:right;
+    }
+    #reg_info{
+    	margin-left: -90px;
+    }
+</style>
+
 <title>register page</title>
 	<%@include file="../nav.jsp" %>
 	<br />
 	<br />
-	<br />
-	<div class="col-md-3">
-	</div>
-	<div class="col-md-4">
-		<h3> 注册</h3>
-	</div>
+<div class="main_container">
+	<p class="position">首页 > 注册</p>
 	<br/>
 	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<form action="register" method="post">
+	<form action="register" method="post" id="reg_info">
 		<div class="form-group container has-feedback">
-			<div class="col-md-3"></div>
-			<div class="col-md-2">手机号码:</div>
+			<div class="col-md-2 info_la">手机号码:</div>
 			<div class="col-md-3">
 				<input type="text" name="phoneNo" id="phoneNo" class="form-control" />
 			</div>
 			<br /> <br />
-			<div class="col-md-3"></div>
-			<div class="col-md-2">姓名:</div>
+			<div class="col-md-2 info_la">姓名:</div>
 			<div class="col-md-3">
 				<input type="text" name="name" id="name" class="form-control" />
 			</div>
 			<br /> <br />
-			<div class="col-md-3"></div>
-			<div class="col-md-2">性别:</div>
+			<div class="col-md-2 info_la">性别:</div>
 			<div class="col-md-3">
 				<div class="col-md-5">
 				<label class="radio"> 
@@ -58,29 +57,25 @@
 			</div>
 			</div>
 			<br /> <br />
-			<div class="col-md-3"></div>
-			<div class="col-md-2">密码:</div>
+			<div class="col-md-2 info_la">密码:</div>
 			<div class="col-md-3">
 				<input type="password" name="passwordOne" id="passwordOne"
 					class="form-control" />
 			</div>
 			<br /> <br />
-			<div class="col-md-3"></div>
-			<div class="col-md-2">确认密码:</div>
+			<div class="col-md-2 info_la">确认密码:</div>
 			<div class="col-md-3">
 				<input type="password" name="passwordTwo" id="passwordTwo"
 					class="form-control" />
 			</div>
 			<br /> <br />
-			<div class="col-md-3"></div>
-			<div class="col-md-2">生日:</div>
+			<div class="col-md-2 info_la">生日:</div>
 			<div class="col-md-3">
 				<input type="date" name="birthday" id="birthday"
 					class="form-control" />
 			</div>
 			<br /> <br />
-			<div class="col-md-3"></div>
-			<div class="col-md-2">城市:</div>
+			<div class="col-md-2 info_la">城市:</div>
 			<div class="col-md-3">
 				<select data-toggle="select" name="city" id="city" class="form-control select select-default mrs mbm">
 					<option value="南京">南京</option>
@@ -100,18 +95,18 @@
 			<%
 				} 
 			%>
-			<div class="col-md-6"></div>
+			<br/>
+			<br/>
+			<div class="col-md-1" style="width:100px;"></div>
+			<div class="col-md-2">
+				<s:reset value="重置" class="btn btn-default btn-lg btn-block" />
+			</div>
 			<div class="col-md-2">
 				<s:submit value="注册" class="btn btn-primary btn-lg btn-block" />
 			</div>
-			<br /> <br />
-			<div class="col-md-6"></div>
-			<div class="col-md-2">
-				<s:reset value="重置" class="btn btn-primary btn-lg btn-block" />
-			</div>
 		</div>
 	</form>
-
+</div>
 
 </body>
 </html>

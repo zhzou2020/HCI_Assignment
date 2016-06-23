@@ -30,13 +30,12 @@
 				<input type="text" name="info" id="info" class="form-control" style="width:260px"/>
 			</div>
 			<br /> <br /> <br/>
-			<div class="col-xs-3"></div>
+			<div class="col-xs-4"></div>
 			<div class="col-xs-3">
-				<s:reset value="重新输入" class="btn btn-default btn-block" />
+				<s:reset value="重新输入" class="btn btn-default" />
 			</div>
-			<div class="col-xs-1"></div>
 			<div class="col-xs-3">
-				<input type="button" value="添加商品" id="submit" class="btn btn-primary btn-block" />
+				<input type="button" value="添加商品" id="submit" class="btn btn-primary" />
 			</div>
 			<br/>
 	</form>

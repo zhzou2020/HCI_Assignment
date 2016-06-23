@@ -15,7 +15,7 @@
 		<div class="col-md-3">银行卡账号:</div>
 		<div class="col-md-3">
 			<input name="account" type="text" class="form-control login-field"
-				id="account" style="width:200px"/>
+				id="account" style="width:210px"/>
 		</div>
 		<br/>
 		<br/>
@@ -23,7 +23,7 @@
 		<div class="col-md-3">银行卡密码:</div>
 		<div class="col-md-3">
 			<input name="password" type="password"
-				class="form-control login-field" id="password" style="width:200px"/>
+				class="form-control login-field" id="password" style="width:210px"/>
 		</div>
 		<br/>
 		<br/>
@@ -31,14 +31,15 @@
 		<div class="col-md-3">充值金额:</div>
 		<div class="col-md-3">
 			<input name="topupamount" type="text"
-				class="form-control login-field" id="topupamount" style="width:200px"/>
+				class="form-control login-field" id="topupamount" style="width:210px"/>
 		</div>
 		<br/>
 		<br/>
-		<div class="col-md-8"></div>
+		<br/>
+		<div class="col-md-6"></div>
 		<div class="col-md-3">
-			<input type="button" class="btn btn-primary" name="topup" id="topup"
-				value="&nbsp;&nbsp;&nbsp;&nbsp;充值&nbsp;&nbsp;&nbsp;&nbsp;"/>
+			<input type="button" class="btn btn-primary btn-block" name="topup" id="topup"
+				value="充值"/>
 		</div>
 	</form>
 </body>

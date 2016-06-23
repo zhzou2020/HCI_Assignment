@@ -34,7 +34,7 @@
 		<div class="col-md-3"></div>
 		<div class="col-md-3">店名:</div>
 		<div class="col-md-3" id="b_name">
-		<s:property value="#session['bname1]"/>
+		<s:property value="#session['bname1']"/>
 		</div>
 		<br /> <br />
 		<div class="col-md-3"></div>

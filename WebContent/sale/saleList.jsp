@@ -6,7 +6,7 @@
 <br />
 <br />
 <div class="main_container">
-	<p class="position">首页 > 计划查看</p>
+	<p class="position">首页 > 订单查看</p>
 	
 	<table class="table table-responsive table-hover table_position2" id="sales" style="width:1000px;">
 		<tr>
@@ -44,6 +44,11 @@
 						<button class="btn btn-danger cancel_sale" data-id="<s:property value="#sale['id']"/>">取消订单</button>
 					</td>
 				</s:if>
+				<s:else>
+					<td>
+						<button class="btn btn-danger cancel_sale" data-id="<s:property value="#sale['id']"/>" disabled="disabled">取消订单</button>
+					</td>
+				</s:else>
 				<%
 					}
 				%>
@@ -66,54 +71,40 @@
 				<h4 class="modal-title" id="title">本订单信息</h4>
 			</div>
 			<div class="modal-body">
-				<form>
-					<div class="col-md-4">
+					<p class="col-md-3">
         				订单id:
-        			</div>
-					<div class="col-md-3">
-						<input type="text" id="s_id" name="s_id" value="" class="form-control login-field" disabled="disabled"/>
-        			</div>
+        			</p>
+					<p class="col-md-3" id="s_id"></p>
         			<br/>
         			<br/>
-					<div class="col-md-4">
+					<p class="col-md-3">
         				店铺id:
-        			</div>
-					<div class="col-md-3">
-						<input type="text" id="b_id" name="b_id" value="" class="form-control login-field" disabled="disabled"/>
-        			</div>
+        			</p>
+					<p class="col-md-3" id="b_id"></p>
         			<br/>
         			<br/>
-        			<div class="col-md-4">
+        			<p class="col-md-3">
         				状态:
-        			</div>
-        			<div class="col-md-6">
-						<input type="text" id="state" name="state" value="" class="form-control login-field" disabled="disabled"/>
-					</div>
+        			</p>
+        			<p class="col-md-6" id="state"></p>
 					<br/>
         			<br/>
-        			<div class="col-md-4">
+        			<p class="col-md-3">
         				销售日期:
-        			</div>
-        			<div class="col-md-6">
-						<input type="text" id="s_date"value="" class="form-control login-field" disabled="disabled"/>
-					</div>
+        			</p>
+        			<p class="col-md-6" id="s_date"></p>
 					<br/>
 					<br/>
-					<div class="col-md-4">
+					<p class="col-md-3">
         				销售人id:
-        			</div>
-        			<div class="col-md-6">
-						<input type="text" id="salesman_id" value="" class="form-control login-field" disabled="disabled"/>
-					</div>
+        			</p>
+        			<p class="col-md-6" id="salesman_id"></p>
 					<br/>
 					<br/>
-					<div class="col-md-4">
+					<p class="col-md-3">
         				会员id:
-        			</div>
-        			<div class="col-md-6">
-						<input type="text" id="m_id" value="" class="form-control login-field" disabled="disabled"/>
-					</div>
-				</form>
+        			</p>
+        			<p class="col-md-6" id="m_id"></p>
 				<br/>
 				<table class="table table-responsive table-hover" id="saleitems">
 					<tr>

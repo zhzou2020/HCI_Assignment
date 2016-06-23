@@ -109,7 +109,6 @@
 		</s:if>
 	</form>
 	<s:if test="#session.employee != null">
-			<div class="col-md-6"></div>
 			<div class="col-md-2">
 				<button name="saleRecord" id="saleRecord" value="" class="btn btn-primary" onclick="javascript:window.location.href='saleRecord?id=<s:property value="#session.thisuser['id']"/>';">订单记录</button>
 			</div>
