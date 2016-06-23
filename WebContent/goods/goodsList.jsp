@@ -82,10 +82,10 @@
 				</form>
 			</div>
 			<div class="modal-footer">
-				<%
+			<%
 						if (session.getAttribute("employee") != null) {
 				%>
-					<button type="button" class="btn btn-primary" name="update" id="update">保存更改信息</button>
+					<button type="button" class="btn btn-primary" name="update" id="update" data-placement="top" data-content="修改成功">保存更改信息</button>
 				<%		
 						} 
 				%>

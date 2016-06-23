@@ -18,6 +18,7 @@ $("#submit").click(function(){
 });
 
 $(".goods_info").click(function(){
+	$("#update").popover("hide");
 	var gid = $(this).find('.id').html();
 	var path = $('#path').html();
 	$.ajax({
@@ -48,18 +49,21 @@ $(".goods_info").click(function(){
 })
 
 $("#update").click(function(){
-	var id = $("#id").val();
-	var name = $("#name").val();
-	var price = $("#price").val();
-	var info = $("#info").val();
+	var id = $("#info_id").html();
+	var name = $("#info_name").html();
+	var price = $("#info_price").val();
+	var info = $("#info_info").val();
+	$("#update").popover();
 	$.ajax({
 		url: "updategoods.action",
 		type: 'POST',
 		dataType: 'JSON',
 		data:{'id':id, 'name':name, 'price':price, 'info':info},
 		success:function(data){
-			alert(data["result"]);
+//			alert(data["result"]);
 //			$("#result").append(data["result"]);
+			$("#update").attr("data-content", data["result"]);
+			$("#update").popover("show");
 		},
 		error:function(){
 			alert("failed");

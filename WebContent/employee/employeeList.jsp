@@ -6,22 +6,22 @@
 <br/>
 <br/>
 <div class="main_container">
-	<p class="position">首页 > 计划查看</p>
+	<p class="position">首页 > 店员管理</p>
 	<div class="form_info2">
 	<%
 		if (session.getAttribute("employee") != null) {
 	%>
 	<s:if test="#session.employee.authority == 0">
-	<div class="col-md-10">
-	</div>
-	<button class="btn btn-primary" id="add_new_item"
-		onclick="javascript:window.location.href='addEmployee.jsp'">添加新员工</button>
+		<div class="col-md-10">
+		</div>
+		<button class="btn btn-primary" id="add_new_item"
+			onclick="javascript:window.location.href='addEmployee.jsp'">添加新员工</button>
 	</s:if>
 	<%
 		}
 	%>
 	<br/><br/>
-	<table class="table table-responsive table-hover">
+	<table class="table table-responsive table-hover" style="width:930px;">
 		<tr>
 			<th>员工编号</th>
 			<th>员工姓名</th>

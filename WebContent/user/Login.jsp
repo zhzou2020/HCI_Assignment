@@ -13,7 +13,7 @@
 	</div>
 	
 	<div id="path" style="display:none"><%=request.getContextPath() %></div>
-	
+	<br/>
 	<form method="post" action="#" class="login_info">
 		<div class="form-group container has-feedback">
 			<input name="phoneNo" type="text" class="form-control login-field"

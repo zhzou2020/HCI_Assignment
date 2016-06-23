@@ -162,7 +162,7 @@ $('body').delegate('.p_info', 'click', function() {
 })
 
 $('#passPlan').click(function(){
-	var pid = $("#p_id").val();
+	var pid = $("#p_id").html();
 	$.ajax({
 		url: "passPlan?id=" + pid,
 		method: 'GET',
@@ -179,7 +179,7 @@ $('#passPlan').click(function(){
 
 
 $('#rejectPlan').click(function(){
-	var pid = $("#p_id").val();
+	var pid = $("#p_id").html();
 	$.ajax({
 		url: "rejectPlan?id=" + pid,
 		method: 'GET',
