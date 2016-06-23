@@ -1,7 +1,3 @@
-$(function () 
-      { $("[data-toggle='popover']").popover();
-});
-
 $("#submit").click(function(){
 	var name = $("#name").val();
 	var passwordOne = $("#passwordOne").val();
@@ -61,8 +57,9 @@ $('#login').click(function(){
 	var id = $('#id').val();
 	var password = $('#password').val();
 	if(isNaN(id) || id == ""){
-		$("#login_alert").html("账号应由数字组成，请重新填写～");
-		$("#login_alert").css("visibility", "visible");
+		$("#id").attr("data-content", "账号应由数字组成，请重新填写～");
+		$("#id").popover();
+		$("#id").popover("show");
 	} else{
 		$.ajax({
 			url: "loginEmployee.action",
@@ -74,8 +71,9 @@ $('#login').click(function(){
 					$("#login_alert").css("visibility", "hidden");
 					window.location.href = $("#path").html() + "/goods/goodslist";
 				} else{
-					$("#login_alert").html("账号或密码错误!");
-					$("#login_alert").css("visibility", "visible");
+					$("#id").attr("data-content", "账号或密码错误!");
+					$("#id").popover();
+					$("#id").popover("show");
 				}
 			},
 			error:function(){
