@@ -1,5 +1,6 @@
-$(function () 
-      { $("[data-toggle='popover']").popover();
+$(function () { 
+	$("[data-toggle='popover']").popover();
+	$("").popover('hide');
 });
 
 $("#submit").click(function(){
