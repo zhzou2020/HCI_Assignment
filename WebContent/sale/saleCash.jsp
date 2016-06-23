@@ -7,8 +7,13 @@
 <br/>
 <div class="main_container">
 	<p class="position">首页 > 无卡销售</p>
-
-	<table class="table table-responsive table-hover sale_table" id="saleitems">
+	<br/>
+	<ul class="nav nav-tabs nav-stacked" style="width:100px;float:left">
+	  <li role="presentation"><a href="<%=request.getContextPath()+"/sale/saleCard.jsp"%>">有卡</a></li>
+	  <li role="presentation" class="active"><a href="#">无卡</a></li>
+	</ul>
+	
+	<table class="table table-responsive table-hover sale_table" id="saleitems" style="margin-top:0px;">
 		<tr>
 			<th>商品编号</th>
 			<th>商品单价</th>
@@ -41,8 +46,8 @@
 			</tr>
 		</s:iterator>
 	</table>
-	<form action="addgoods" method="post" class="sale_add">
-		<div class="col-xs-offset-1 col-xs-3">商品id:</div>
+	<form action="addgoods" method="post" class="sale_add" style="margin-top:0px;">
+		<div class="col-xs-offset-1 col-xs-3">商品编号:</div>
 		<div class="col-xs-8">
 			<select data-toggle="select" name="gid" id="gid"
 				class="form-control select select-default mrs mbm">
@@ -95,7 +100,7 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">销售信息</h4>
-        <p class="modal-title">销售分店id：<s:property value="#session.employee.bid"/></p>
+        <p class="modal-title">销售分店编号：<s:property value="#session.employee.bid"/></p>
       </div>
       <div class="modal-body">
         <form method="post" action="changeGoodsInfo">
