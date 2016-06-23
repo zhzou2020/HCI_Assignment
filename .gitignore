@@ -18,3 +18,11 @@ hs_err_pid*
 src/applicationContext.xml 
 
 *.DS_Store
+
+src/applicationContext.xml
+
+WebContent/homepage/homepage.jsp
+
+src/applicationContext.xml
+
+WebContent/resource/homepage-image2.jpg
