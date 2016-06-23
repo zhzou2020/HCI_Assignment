@@ -54,12 +54,16 @@
 			<button class="btn btn-primary" id="showPlan" name="showPlan" data-toggle="modal" data-target="#myModal">查看本次计划</button>
 		</div> -->
 		
-		<div class="col-md-4"></div>
+		<!-- <div class="col-md-4"></div>
 		<div class="col-md-4">
 			<button class="btn btn-primary btn-block" id="showPlan" name="showPlan" data-toggle="modal" data-target="#myModal" style="margin-left:18px;width:160px">查看本次计划</button>
-		</div>
+		</div> -->
 	</div>
 </form>
+
+<div class="col-md-offset-2 col-md-4">
+<button class="btn btn-primary btn-block" id="showPlan" name="showPlan" data-toggle="modal" data-target="#myModal" style="margin-left:50px;width:137px">查看本次计划</button>
+</div>
 		
 
 <!-- Modal -->
@@ -162,6 +166,5 @@
 <script src="../js/jquery.js"></script>
 <script src="../flatui/dist/js/flat-ui.min.js"></script>
 <script src="../flatui/assets/js/application.js"></script>
-
 <script src="../js/plan.js"></script>
 <script src="../js/jquery-ui.js"></script>
