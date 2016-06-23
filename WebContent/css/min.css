@@ -295,10 +295,10 @@ p{
 }
 
 .canvas_position {
-	position: relative;
-	margin-top: 200px !important;
-	margin-left: 350px !important;
-	width: 700px !important;
+	float: left;
+	margin-top: 0px !important;
+	margin-left: 100px !important;
+	width: 500px !important;
 }
 
 .b_info {
