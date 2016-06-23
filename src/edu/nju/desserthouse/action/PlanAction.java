@@ -62,7 +62,13 @@ public class PlanAction extends BaseAction{
 		} else{
 			list = planService.getValidPlan();
 		}
-		session.put("planlist", list);
+		
+		List<Plan> r_list = new ArrayList<Plan>();
+		for(int i=0;i<list.size();i++){
+			r_list.add(list.get(list.size()-i-1));
+		}
+		
+		session.put("planlist", r_list);
 		return SUCCESS;
 	}
 	

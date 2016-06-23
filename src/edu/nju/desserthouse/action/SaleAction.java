@@ -225,7 +225,10 @@ public class SaleAction extends BaseAction {
 			int mid = user.getId();
 			List<Sale> salelist = saleService.getSales("mid",
 					Integer.toString(mid));
-			session.put("salelist", salelist);
+			List<Sale> r_salelist = new ArrayList<Sale>();
+			for(int i=0;i<salelist.size();i++)
+				r_salelist.add(salelist.get(salelist.size()-i-1));
+			session.put("salelist", r_salelist);
 			return SUCCESS;
 		} else if (session.get("employee") != null) {
 			Employee employee = (Employee) session.get("employee");
@@ -233,7 +236,11 @@ public class SaleAction extends BaseAction {
 				int eid = employee.getId();
 				List<Sale> salelist = saleService.getSales("salesman_id",
 						Integer.toString(eid));
-				session.put("salelist", salelist);
+				List<Sale> r_salelist = new ArrayList<Sale>();
+				for(int i=0;i<salelist.size();i++)
+					r_salelist.add(salelist.get(salelist.size()-i-1));
+				
+				session.put("salelist", r_salelist);
 			} else {
 
 			}
