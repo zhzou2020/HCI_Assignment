@@ -13,7 +13,6 @@
 	  <li role="presentation" class="active"><a href="#">有卡</a></li>
 	  <li role="presentation"><a href="<%=request.getContextPath()+"/sale/saleCash.jsp"%>">无卡</a></li>
 	</ul>
-	
 	<table class="table table-responsive table-hover sale_table" id="saleitems" style="margin-top:0px;">
 		<tr>
 			<th>商品编号</th>
@@ -49,6 +48,7 @@
 	</table>
 	
 	<form action="addgoods" method="post" class="sale_add" style="margin-top:0px;">
+		<div class="alert alert-danger sale_alert" role="alert" id="fail" style="display:none;">添加失败</div>
 		<div class="col-xs-offset-1 col-xs-3">商品编号:</div>
 		<div class="col-xs-8">
 			<select data-toggle="select" name="gid" id="gid"
@@ -78,7 +78,7 @@
 		<br /> <br />
 		<div class="col-xs-offset-7 col-xs-3">
 			<input type="button" value="添加商品" id="addSaleItem"
-				class="btn btn-primary btn-block" />
+				class="btn btn-primary btn-block"/>
 		</div>
 		
 		<br/><br/>
@@ -138,4 +138,6 @@
 <script src="../js/jquery.js"></script>
 <script src="../flatui/dist/js/flat-ui.min.js"></script>
 <script src="../flatui/assets/js/application.js"></script>
+<script src="../bootstrap-3.3.5/js/tooltip.js"></script>
+<script src="../bootstrap-3.3.5/js/popover.js"></script>
 <script src="../js/sale.js"></script>

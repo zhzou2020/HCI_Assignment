@@ -3,9 +3,16 @@ $("#addSaleItem").click(function(){
 	var stock = $("#stock").html();
 	var gid = $("#gid").val();
 	if(isNaN(number) || number == ""){
-		alert("销售数量必须为数字！");
+		$("#fail").html("销售数量必须为数字！");
+		$("#fail").css("display", "block");
+	} else if(gid == null){
+		$("#fail").html("销售商品编号不得为空！");
+		$("#fail").css("display", "block");
+
 	} else if(parseInt(number) > parseInt(stock)){
-		alert("无法出售大于现有库存量的商品！");
+		$("#fail").html("无法出售大于现有库存量的商品！");
+		$("#fail").css("display", "block");
+
 	} else{
 		$.ajax({
 			url: "addSaleItem",
@@ -14,7 +21,8 @@ $("#addSaleItem").click(function(){
 			data:{"number":number, "gid":gid},
 			success:function(data){
 				var dataRole = $.parseJSON(data['result']);
-				if(dataRole['result'] == "true"){
+				if(dataRole['result'] == "true"){ 
+					$("#fail").css("display", "none");
 					var append = "<tr><td>" +gid+ "</td><td>" + dataRole['price'] + "</td><td>" + number + "</td><td><button class=\"btn btn-primary d_info\" data-id=" +
 					"\"" + gid + "\"" + ">删除条目</button></td></tr>";
 					$("#saleitems").append(append);
