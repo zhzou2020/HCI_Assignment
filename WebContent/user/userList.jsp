@@ -5,7 +5,7 @@
 <br/>
 <br/>
 <div class="main_container">
-	<p class="position">首页 > 计划查看</p>
+	<p class="position">首页 > 会员列表</p>
 	
 	<table class="table table-responsive table-hover table_position2" style="width:1000px;">
 		<tr>

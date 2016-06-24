@@ -4,6 +4,12 @@
 <title>销售(有卡)</title>
 <%@include file="../nav.jsp"%>
 
+<style>
+	p{
+		font-size:18px;
+	}
+</style>
+
 <br/>
 <br/>
 <div class="main_container">
@@ -107,15 +113,24 @@
       </div>
       <div class="modal-body">
         <form method="post" action="#">
-        	需付款：<div id="amount"><s:property value="#session.amount"/></div>
+        	<p class="col-md-3">需付款：</p>
+        	<p id="amount" class="col-md-9"><s:property value="#session.amount"/></p>
 			<br/>
-			会员编号：<input type="text" id="memberid" name="memberid" value="" class="form-control login-field"/>
 			<br/>
-			会员姓名：<div id="membername"></div>
+			<p class="col-md-3">会员编号：</p>
+			<div class="col-md-5">
+				<input type="text" id="memberid" name="memberid" value="" class="form-control login-field"/>
+			</div>
 			<br/>
-			会员折扣：<div id="discount"></div>
 			<br/>
-			扣款金额：<div id="discount_pay_amount"></div>
+			<p class="col-md-3">会员姓名：</p>
+			<p id="membername" class="col-md-9"> &nbsp;&nbsp;</p>
+			<br/><br/>
+			<p class="col-md-3">会员折扣：</p>
+			<p id="discount" class="col-md-9"> &nbsp;&nbsp;</p>
+			<br/><br/>
+			<p class="col-md-3">扣款金额：</p>
+			<p id="discount_pay_amount" class="col-md-9"> &nbsp;&nbsp;</p>
 			<br/>
 		</form>
       </div>

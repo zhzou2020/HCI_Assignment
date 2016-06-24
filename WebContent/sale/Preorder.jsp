@@ -44,6 +44,7 @@
 		</s:iterator>
 	</table>
 	<form action="addgoods" method="post" class="sale_add">
+		<div class="alert alert-danger sale_alert" role="alert" id="fail" style="display:none;">添加失败</div>
 		<div class="col-xs-offset-1 col-xs-3">商品编号:</div>
 		<div class="col-xs-8">
 			<select data-toggle="select" name="gid" id="gid"
