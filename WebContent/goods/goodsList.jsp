@@ -38,7 +38,25 @@
 			</div>
 		</s:iterator>
 	</div>
-</div>
+	<br/>
+	<br/>
+	
+		<div class="pagination" style="margin-left:616px; clear:both;">
+		  <ul>
+		    <li class="previous">
+		      <a href="#" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </li>
+		    <li class="active"><a href="#">1</a></li>
+		    <li>
+		      <a href="#" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		      </a>
+		    </li>
+		  </ul>
+		</div>
+
 
 <div class="modal fade notice-modal" id="myModal" tabindex="-1"
 	role="dialog" aria-labelledby="modal-title-notice">

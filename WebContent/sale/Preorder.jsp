@@ -10,7 +10,7 @@
 <div class="main_container">
 	<p class="position">首页 > 选取预定分店和日期 > 甜品预定</p>
 	
-	<table class="table table-responsive table-hover sale_table" id="saleitems" style="width:500px;">
+	<table class="table table-responsive table-hover sale_table" id="saleitems" style="width:480px;">
 		<tr>
 			<th>商品编号</th>
 			<th>商品单价</th>
